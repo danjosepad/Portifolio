@@ -1,0 +1,35 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  min-height: 50px;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+a {
+  color: #C4B094;
+  text-decoration: none;
+}
+.header a {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header .active, .header a:hover{
+  color: #AE9878;
+  border-bottom: 2px solid #C4B094;
+  padding-bottom: 4px;
+  transition: all 0.25s ease-out; 
+}
