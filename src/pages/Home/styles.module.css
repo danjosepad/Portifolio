@@ -18,7 +18,7 @@
   align-items: center;
 }
 a {
-  color: #C4B094;
+  color: #c4b094;
   text-decoration: none;
 }
 .header a {
@@ -27,30 +27,61 @@ a {
   font-weight: 600;
 }
 
-.header .active, .header a:hover{
-  color: #AE9878;
-  border-bottom: 2px solid #C4B094;
+.header .active,
+.header a:hover {
+  color: #ae9878;
+  border-bottom: 2px solid #c4b094;
   padding-bottom: 4px;
-  transition: all 0.25s ease-out; 
+  transition: all 0.1s;
+}
+.about {
+  margin-top: 40px;
+  animation: fadein 1.25s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.about h1{
-  color: #CDBFA7;
+.about h1 {
+  color: #cdbfa7;
   font-size: 42px;
   text-align: center;
 }
-.media-links {
-  text-align: center;
+.about .photo {
+  display: block;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 8px 0px rgb(116, 115, 116);
 }
-.media-links a {
+
+.mediaLinks {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  width: 40%;
 }
+
+.mediaLinks a {
+  font-size: 18px;
+}
+
 .about h2 {
   margin-top: 40px;
   font-size: 36px;
-  color: #59504D;
+  color: #59504d;
   margin-bottom: 20px;
 }
-p{
+p {
   margin-bottom: 5px;
 }
 .about p {
@@ -58,14 +89,15 @@ p{
   text-align: left;
 }
 
-.cursos a {
+.courses .coursesLinks {
   display: block;
   text-align: center;
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 40px;
 }
-.cursos img {
+
+.courses img {
   display: block;
   margin: auto;
   width: 150px;
@@ -80,4 +112,3 @@ footer {
   margin-top: 100px;
   text-align: center;
 }
-

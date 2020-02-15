@@ -1,0 +1,202 @@
+.header {
+  padding: 60px 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 50px;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+a {
+  color: #c4b094;
+  text-decoration: none;
+}
+.header a {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header .active,
+.header a:hover {
+  color: #ae9878;
+  border-bottom: 2px solid #c4b094;
+  padding-bottom: 4px;
+  transition: all 0.1s;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 30px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  animation: fadein 1.25s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.user-info {
+  grid-area: user-info;
+}
+
+.photo {
+  grid-area: photo;
+}
+
+.about {
+  grid-area: about;
+}
+
+.work-exps {
+  grid-area: work-exps;
+}
+.education {
+  grid-area: education;
+}
+
+.knowlodges {
+  grid-area: knowlodges;
+}
+
+.social-media {
+  grid-area: social-media;
+}
+.container {
+  grid-template-areas:
+    "user-info photo"
+    "work-exps about"
+    "education knowlodges";
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "about"
+      "user-info"
+      "work-exps"
+      "education"
+      "knowlodges";
+  }
+  .about h2,
+  .user-info h2 {
+    display: none;
+  }
+  .about {
+    font-size: 22px;
+    color: #ae9878;
+    font-weight: bold;
+  }
+  .media-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .container .user-info,
+  .photo,
+  .about {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .work-exps,
+  .education,
+  .knowlodges {
+    margin-top: 40px;
+  }
+}
+
+.container h2 {
+  color: #59504d;
+  margin-bottom: 20px;
+}
+.user-info strong {
+  font-size: 18px;
+}
+.user-info span {
+  display: block;
+  font-size: 16px;
+}
+.user-info small {
+  font-size: 14px;
+}
+
+.user-info .media-links {
+  margin-top: 10px;
+}
+.user-info .media-links a {
+  margin-left: 5px;
+}
+.photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.about strong {
+  display: block;
+  font-weight: 400;
+}
+.company img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+  margin-right: 20px;
+}
+.company strong {
+  font-size: 18px;
+  margin-top: 20px;
+  display: block;
+}
+.company p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.company small {
+  font-weight: 600;
+}
+.institution img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+  margin-right: 20px;
+}
+.institution strong {
+  font-size: 18px;
+  margin-top: 20px;
+  display: block;
+}
+.institution p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.institution small {
+  font-weight: 600;
+}
+
+.knowlodges p {
+  border-bottom: 1px solid #e9eae6;
+  padding: 8px 0 8px 0;
+}
+
+footer {
+  text-align: center;
+}
