@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: Roboto, sans-serif;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  width: 40%;
+  display: grid;
+  grid-template-columns: (5, 1fr);
+  grid-template-rows: 6vh 94vh;
+}
+
+.topMenu {
+  grid-area: top-menu;
+}
+
+.itemsMenu {
+  grid-area: items-menu;
+}
+
+.itemsList {
+  grid-area: items-list;
+}
+
+.menu {
+  grid-template-areas:
+    "top-menu top-menu top-menu top-menu top-menu"
+    "items-menu items-list items-list items-list items-list";
+}
+
+.topMenu{
+  width: 100%;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #a2c3dc;
+  border-right: 1px solid #d9d9d9;
+}
+.topMenu strong {
+  padding: 10px 0 0 20px;
+  font-size: 18px;
+}
+.topMenu img {
+  height: 25px;
+  width: 25px;
+  display: block;
+  margin-right: 10px;
+}
+.topMenu button {
+  border: none;
+  cursor: pointer;
+}
+.itemsMenu {
+  height: 100%;
+  background: #ddeefb;
+  border-right: 1px solid #bad0df;
+}
+.itemsMenu button {
+  width: 100%;
+  border: none;
+  background: #ddeefb;
+  color: #465d92;
+  border-bottom: 1px solid #b1dbf9;
+  height: 40px;
+  font-size: 18px;
+  padding-left: 20px;
+  text-align: initial;
+  cursor: pointer;
+}
+.itemsMenu button:hover {
+  color: #007aff;
+  transition: color 0.2s;
+}
+
+.itemsList {
+  background: #f9f9f9;
+  border-right: 1px solid #d9d9d9;
+  padding: 20px 0 0 20px;
+}
+
+.newText strong {
+  font-weight: 600;
+  color: #333333;
+  cursor: pointer;
+}
+.newText .active {
+  color: #007aff;
+}
+.newText  p {
+  font-size: 14px;
+  color: #8793a7;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.annotation {
+  margin: 40px 0 0 40px;
+  -webkit-animation: fadein 1.25s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.annotation button {
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+
+  background: #f0f0f0;
+  color: #007aff;
+  font-size: 22px;
+  font-weight: 300;
+  transition: all 0.2s;
+}
+.annotation button:hover {
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s;
+}
+.annotation #title {
+  border: none;
+  font-size: 48px;
+}
+
+.annotation textarea {
+  resize: none;
+  border: none;
+  width: 90%;
+  height: 80%;
+  margin: 20px 0 0 10px;
+  overflow-y: hidden;
+}
