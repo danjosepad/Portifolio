@@ -9,45 +9,74 @@ import styles from './styles.module.css';
 export default function AnotacoesJS() {
   const [folders, setFolders] = useState([]);
   const [annotations, setAnnotations] = useState([]);
+
   const [folderName, setFolderName] = useState('');
+  const [folderId, setFolderId] = useState(0);
+
   const [annotationTitle, setAnnotationTitle] = useState('');
   const [annotationText, setAnnotationText] = useState('');
+  const [annotationId, setAnnotationId] = useState(0);
 
   const [show, setShow] = useState(false);
   const [showAnnotation, setShowAnnotation] = useState(false);
 
+  const [annotationBtn, setAnnotationBtn] = useState(true);
+
   const handleModal = () => setShow(!show);
-  const handleAnnotation = () => setShowAnnotation(!showAnnotation);
 
   const addNewFolder = (name) => {
     const newFolder = {
       name,
       id: Math.random(),
     };
+    console.log(newFolder);
     setFolders([...folders, newFolder]);
+    setFolderId(newFolder.id);
+    setAnnotationBtn(false);
+    handleModal();
   };
-  const addNewAnnotation = (name = 'Nova Pasta') => {
+
+  const addNewAnnotation = (id) => {
     const newAnnotation = {
-      name,
+      name: 'Rascunho',
       text: '',
       id: Math.random(),
-      folder: name,
+      folder_id: id,
     };
+    console.log(newAnnotation);
     setAnnotations([...annotations, newAnnotation]);
 
     setAnnotationTitle('');
     setAnnotationText('');
-    handleAnnotation();
+    setAnnotationBtn(false);
   };
+
+  const manageAnnotation = (id) => {
+    setShowAnnotation(true);
+    setAnnotationId(id);
+  };
+
+  const saveAnnotation = (id) => {
+    const index = annotations.findIndex((Annotation) => Annotation.id === id);
+
+    const values = [...annotations];
+    annotations[index].name = annotationTitle;
+    annotations[index].text = annotationText;
+
+    setAnnotations(values);
+  };
+
+  // eslint-disable-next-line prefer-const
+  let listAnnotations = annotations.filter((annotation) => annotation.folder_id === folderId);
 
   return (
     <div id={styles.container}>
       <div className={styles.menu}>
         <div className={styles.topMenu}>
           <strong>Anotações</strong>
-          <button type="button" id={styles.addAnnotation} onClick={() => addNewAnnotation(folderName)}>
+          <button type="button" id={styles.addAnnotation} onClick={() => addNewAnnotation(folderId)} disabled={annotationBtn}>
             <img
-              src="https://image.flaticon.com/icons/svg/2467/2467769.svg"
+              src="https://image.flaticon.com/icons/svg/2467/2467817.svg"
               alt="By xnimrodx on flaticon"
             />
           </button>
@@ -55,9 +84,10 @@ export default function AnotacoesJS() {
         <div className={styles.itemsMenu}>
           {folders.map((folder) => (
             <>
-              <button type="button">{folder.name}</button>
+              <button type="button" onClick={() => setFolderId(folder.id)}>{folder.name}</button>
             </>
           ))}
+
           <button type="button" id={styles.addFolder} onClick={handleModal}>Nova Pasta</button>
           <Modal show={show} onHide={handleModal}>
             <Modal.Header closeButton>
@@ -85,20 +115,20 @@ export default function AnotacoesJS() {
           </Modal>
         </div>
         <div className={styles.itemsList}>
-          {annotations.map((annotation) => (
+          {listAnnotations.map((annotation) => (
             <div className={styles.newText} key={annotation.id}>
-              <strong>{annotation.name}</strong>
+              <strong role="button" onKeyUp={() => manageAnnotation(annotation.id)} onClick={() => manageAnnotation(annotation.id)}>{annotation.name}</strong>
               <p>{annotation.text}</p>
             </div>
           ))}
         </div>
       </div>
       <div className={styles.annotation}>
-        {!handleAnnotation
+        {showAnnotation
         && (
           <>
-            <button type="button">Salvar</button>
-            <input type="text" id="title" placeholder="Digite o titulo aqui" value={annotationTitle} onChange={(e) => setAnnotationTitle(e.target.value)} />
+            <button type="button" onClick={() => saveAnnotation(annotationId)}>Salvar</button>
+            <input type="text" placeholder="Digite o titulo aqui" value={annotationTitle} onChange={(e) => setAnnotationTitle(e.target.value)} />
             <textarea placeholder="Digite sua anotação" value={annotationText} onChange={(e) => setAnnotationText(e.target.value)} />
           </>
         )}
