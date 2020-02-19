@@ -111,6 +111,9 @@ button {
   padding: 20px 0 0 20px;
 }
 
+.newText {
+  animation: fadein 1.25s;
+}
 .newText strong {
   font-weight: 600;
   color: #333333;
@@ -127,10 +130,10 @@ button {
 }
 .annotation {
   margin: 40px 0 0 40px;
-  -webkit-animation: fadein 1.25s;
+  animation: fadein 1.25s;
 }
 
-@-webkit-keyframes fadein {
+@keyframes fadein {
   from {
     opacity: 0;
   }

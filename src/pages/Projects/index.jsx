@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 // import "./styles.css";
-import calculadoraGif from "../../assets/giphy.gif";
-import styles from "./styles.module.css";
+import calculadoraGif from '../../assets/giphy.gif';
+import anotacoesImg from '../../assets/anotacoes.jpg';
+import todolistImg from '../../assets/todolist.jpg';
+import styles from './styles.module.css';
 
 export default function Projetos() {
   const [backend, setBackend] = useState(true);
@@ -80,10 +82,23 @@ export default function Projetos() {
                 <h2>CalculadoraJS</h2>
                 <p>Criação de uma calculadora visual com o uso do ReactJS!</p>
                 <small>
-                  Para a versão usando somente Javascript,{" "}
-                  <a href="https://github.com/danjosepad/Calculadora-JS">
-                    clique aqui
-                  </a>
+                  Para a versão usando somente Javascript, clique aqui
+                </small>
+              </div>
+              <div lassName={styles.projectsContent}>
+                <img src={todolistImg} alt="Foto Todo-List" />
+                <h2>Todo-List</h2>
+                <p>Crie e gerencie suas tarefas usando esse Todo-List em ReactJS</p>
+                <small>
+                  Para a versão usando somente Javascript, clique aqui
+                </small>
+              </div>
+              <div lassName={styles.projectsContent}>
+                <img src={anotacoesImg} alt="Foto AnotacoesJS" />
+                <h2>AnotacoesJS</h2>
+                <p>Sistema de gerenciamento de anotações baseado no iCloud Mail</p>
+                <small>
+                  Para a versão usando somente Javascript, clique aqui
                 </small>
               </div>
             </>
@@ -91,30 +106,7 @@ export default function Projetos() {
 
           {mobile && (
             <>
-              <div className={styles.projectsContent}>
-                <img src={calculadoraGif} alt="gif calculadora" />
-                <h2>CalculadoraJS</h2>
-                <p>Criação de uma calculadora visual com o uso do ReactJS!</p>
-                <small>
-                  Para a versão usando somente Javascript, clique aqui
-                </small>
-              </div>
-              <div>
-                <img src={calculadoraGif} alt="gif calculadora" />
-                <h2>CalculadoraJS</h2>
-                <p>Criação de uma calculadora visual com o uso do ReactJS!</p>
-                <small>
-                  Para a versão usando somente Javascript, clique aqui
-                </small>
-              </div>
-              <div>
-                <img src={calculadoraGif} alt="gif calculadora" />
-                <h2>CalculadoraJS</h2>
 
-                <small>
-                  Para a versão usando somente Javascript, clique aqui
-                </small>
-              </div>
             </>
           )}
 
@@ -154,11 +146,16 @@ export default function Projetos() {
         </div>
       </div>
       <footer>
-        Site desenvolvido usando ReactJS, por{" "}
+        Site desenvolvido usando ReactJS, por
+        {' '}
         <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
           Daniel José Padilha
-        </a>{" "}
-        - © {new Date().getFullYear()}{" "}
+        </a>
+        {' '}
+        - ©
+        {' '}
+        {new Date().getFullYear()}
+        {' '}
       </footer>
     </div>
   );

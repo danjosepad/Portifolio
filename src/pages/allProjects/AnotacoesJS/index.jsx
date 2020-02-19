@@ -29,7 +29,7 @@ export default function AnotacoesJS() {
       name,
       id: Math.random(),
     };
-    console.log(newFolder);
+
     setFolders([...folders, newFolder]);
     setFolderId(newFolder.id);
     setAnnotationBtn(false);
@@ -43,7 +43,7 @@ export default function AnotacoesJS() {
       id: Math.random(),
       folder_id: id,
     };
-    console.log(newAnnotation);
+
     setAnnotations([...annotations, newAnnotation]);
 
     setAnnotationTitle('');
@@ -68,6 +68,7 @@ export default function AnotacoesJS() {
 
   // eslint-disable-next-line prefer-const
   let listAnnotations = annotations.filter((annotation) => annotation.folder_id === folderId);
+
 
   return (
     <div id={styles.container}>
@@ -123,7 +124,9 @@ export default function AnotacoesJS() {
           ))}
         </div>
       </div>
-      <div className={styles.annotation}>
+      <div
+        className={styles.annotation}
+      >
         {showAnnotation
         && (
           <>

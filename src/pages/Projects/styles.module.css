@@ -59,7 +59,7 @@ a {
   }
 }
 .projectsContent img {
-  max-width: 400px;
+  width: 200px;
 }
 .projectsContent h2 {
   font-size: 22px;
