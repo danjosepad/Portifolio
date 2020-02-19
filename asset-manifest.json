@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Portifolio/static/css/main.54c11963.chunk.css",
+    "main.js": "/Portifolio/static/js/main.a28ca640.chunk.js",
+    "main.js.map": "/Portifolio/static/js/main.a28ca640.chunk.js.map",
+    "runtime-main.js": "/Portifolio/static/js/runtime-main.5ee4935f.js",
+    "runtime-main.js.map": "/Portifolio/static/js/runtime-main.5ee4935f.js.map",
+    "static/js/2.bd65ef92.chunk.js": "/Portifolio/static/js/2.bd65ef92.chunk.js",
+    "static/js/2.bd65ef92.chunk.js.map": "/Portifolio/static/js/2.bd65ef92.chunk.js.map",
+    "index.html": "/Portifolio/index.html",
+    "precache-manifest.c482d9136f58c234bcd7216537f39c72.js": "/Portifolio/precache-manifest.c482d9136f58c234bcd7216537f39c72.js",
+    "service-worker.js": "/Portifolio/service-worker.js",
+    "static/css/main.54c11963.chunk.css.map": "/Portifolio/static/css/main.54c11963.chunk.css.map",
+    "static/js/2.bd65ef92.chunk.js.LICENSE.txt": "/Portifolio/static/js/2.bd65ef92.chunk.js.LICENSE.txt",
+    "static/media/anotacoes.jpg": "/Portifolio/static/media/anotacoes.290a8734.jpg",
+    "static/media/coderlogo.png": "/Portifolio/static/media/coderlogo.b0ed13da.png",
+    "static/media/fatecOurinhosLogo.jpg": "/Portifolio/static/media/fatecOurinhosLogo.43f9a9fc.jpg",
+    "static/media/giphy.gif": "/Portifolio/static/media/giphy.583b9131.gif",
+    "static/media/logoGoStack.png": "/Portifolio/static/media/logoGoStack.f825da68.png",
+    "static/media/resizedPhoto.png": "/Portifolio/static/media/resizedPhoto.5d5a1130.png",
+    "static/media/todolist.jpg": "/Portifolio/static/media/todolist.5da88894.jpg",
+    "static/media/yamanLogo.png": "/Portifolio/static/media/yamanLogo.403b9d3d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ee4935f.js",
+    "static/js/2.bd65ef92.chunk.js",
+    "static/css/main.54c11963.chunk.css",
+    "static/js/main.a28ca640.chunk.js"
+  ]
+}
