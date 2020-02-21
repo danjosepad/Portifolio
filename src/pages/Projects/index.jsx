@@ -53,10 +53,10 @@ export default function Projetos() {
       <div className={styles.projectsContainer}>
         <h1>Veja alguns dos projetos que já desenvolvi</h1>
         <div className={styles.headerProjects}>
-          <button onClick={() => showBackend()}>Backend</button>
-          <button onClick={() => showWeb()}>Web</button>
-          <button onClick={() => showMobile()}>Mobile</button>
-          <button onClick={() => showFullstack()}>Fullstack</button>
+          <button type="button" onClick={() => showBackend()}>Backend</button>
+          <button type="button" onClick={() => showWeb()}>Web</button>
+          <button type="button" onClick={() => showMobile()}>Mobile</button>
+          <button type="button" onClick={() => showFullstack()}>Fullstack</button>
         </div>
         <div className={styles.projects}>
           {backend && (

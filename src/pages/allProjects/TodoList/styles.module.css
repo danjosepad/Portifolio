@@ -1,0 +1,136 @@
+
+.title {
+  margin-top: 2%;
+  text-align: center;
+  color: #59504D;
+}
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 30px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+aside {
+  width: 300px;
+  min-width: 300px;
+  background: #fff;
+  box-shadow: 0px 5px 16px 0px rgba(179, 175, 179, 1);
+  border-radius: 10px;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+aside label {
+  color: #acacac;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+aside input {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  color: #666;
+  border: 0;
+  border-bottom: 1px solid #999;
+}
+
+aside #addTodo {
+  width: 100%;
+  margin: 0 auto;
+  border: none;
+  margin-top: 30px;
+  background: #c4b094;
+  border-radius: 2px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+aside #addTodo:hover {
+  background: #ae9878;
+  transition: background 0.5s;
+}
+
+.list {
+  margin-left: 80px;
+  flex: 1;
+}
+.list h2{
+  text-align: center;
+  color: #AE9878;
+  margin-bottom: 20px;
+}
+#todo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.todoItem {
+  width: 250px;
+  min-height: 125px;
+  height: auto;
+  background: #E9EAE6;
+  border: 1px solid rgb(201, 194, 194);
+  border-radius: 10px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 6px -8px black;
+  -webkit-animation: fadein 1.0s;
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.todoItem button{
+  font-size: 18px;
+  margin: 10px 20px 0 auto;
+  font-weight: 600;
+  border: none;
+  background: #E9EAE6;
+  color: #CDBFA7;
+  cursor: pointer;
+}
+
+.todoItem strong {
+  font-size: 18px;
+  margin-top: 10%;
+  color: #59504D;
+}
+
+@media (max-width: 1200px){
+  #todo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+  }
+  .list h2 {
+    margin-top: 50px;
+  }
+  #todo {
+    
+    grid-template-columns: 1fr;
+  }
+}

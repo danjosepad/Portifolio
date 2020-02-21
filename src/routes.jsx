@@ -6,6 +6,8 @@ import Projects from './pages/Projects/index';
 import Curriculum from './pages/Curriculum/index';
 
 import AnotacoesJS from './pages/allProjects/AnotacoesJS/index';
+import TodoList from './pages/allProjects/TodoList/index';
+import CalculadoraJS from './pages/allProjects/CalculadoraJS/index';
 
 export default function Routes() {
   return (
@@ -14,6 +16,8 @@ export default function Routes() {
         <Route path="/" exact component={Home} />
         <Route path="/projetos" exact component={Projects} />
         <Route path="/projetos/anotacoesJS" exact component={AnotacoesJS} />
+        <Route path="/projetos/todo-list" exact component={TodoList} />
+        <Route path="/projetos/CalculadoraJS" exact component={CalculadoraJS} />
         <Route path="/curriculo" exact component={Curriculum} />
       </Switch>
     </BrowserRouter>

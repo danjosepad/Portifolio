@@ -1,0 +1,119 @@
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.title {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  overflow: hidden;
+  border-right: 0.15em solid #c4b094;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: typing 2.75s steps(40, end),
+    blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 300px;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #c4b094;
+  }
+}
+
+.shell {
+  width: 300px;
+  height: 340px;
+  background-color: #e9eae6;
+  border-radius: 20px;
+  box-shadow: 0px 5px 16px 0px rgba(179, 175, 179, 1);
+  margin-bottom: 5%;
+  animation: fadein 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.display {
+  height: 60px;
+  width: 80%;
+  margin: 10px auto;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.08);
+}
+
+.display input {
+  height: 100%;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  font-size: 18px;
+  background-color: #f9f9f9;
+  color: #59504d;
+  font-weight: 600;
+}
+button {
+  font-weight: 300;
+  border: 0;
+  border-radius: 5px;
+  height: 28px;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+  background: #cdbfa7;
+  transition: all 0.3s;
+}
+#buttons {
+  margin: 0 auto;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.numbers {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.actions {
+  width: 25%;
+  margin: 0 auto 0 10px;
+}
+
+.actions button {
+  height: 32px;
+  width: 90%;
+  margin-bottom: 5px;
+}
+
+a {
+  color: #c4b094;
+  text-decoration: none;
+  font-weight: 600;
+  animation: fadein 4.5s;
+}
