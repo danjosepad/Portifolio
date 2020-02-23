@@ -58,14 +58,20 @@ a {
     opacity: 1;
   }
 }
-img {
+
+.projectsContent img {
   width: 600px;
   height: 600px;
 }
-img[src*="gif"] {
+.logoApi {
+  width: 250px !important;
+  height: 125px !important;
+}
+.projectsContent img[src*="gif"] {
   width: 300px;
   height: 300px;
 }
+
 .projectsContent h2 {
   font-size: 22px;
   color: #59504d;
@@ -95,6 +101,7 @@ img[src*="gif"] {
   width: 100px;
   height: 50px;
   transform: skew(-20deg);
+  border-radius: 5px;
   transition-property: width height;
   transition-duration: 0.2s;
 

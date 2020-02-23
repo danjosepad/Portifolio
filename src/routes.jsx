@@ -1,13 +1,13 @@
-import React from 'react';
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import React from "react";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 
-import Home from './pages/Home/index';
-import Projects from './pages/Projects/index';
-import Curriculum from './pages/Curriculum/index';
+import Home from "./pages/Home/index";
+import Projects from "./pages/Projects/index";
+import Curriculum from "./pages/Curriculum/index";
 
-import AnotacoesJS from './pages/allProjects/AnotacoesJS/index';
-import TodoList from './pages/allProjects/TodoList/index';
-import CalculadoraJS from './pages/allProjects/CalculadoraJS/index';
+import AnotacoesJS from "./pages/allProjects/AnotacoesJS/index";
+import TodoList from "./pages/allProjects/TodoList/index";
+import CalculadoraJS from "./pages/allProjects/CalculadoraJS/index";
 
 export default function Routes() {
   return (

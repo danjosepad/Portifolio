@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // import "./styles.css";
-import coderLogo from "../../assets/coderlogo.png";
-import goStackLogo from "../../assets/logoGoStack.png";
+import aos from "aos";
+import "aos/dist/aos.css";
+
+import reactLogo from "../../assets/reactLogo.png";
+import nodeLogo from "../../assets/nodeLogo.png";
 import photo from "../../assets/resizedPhoto.png";
 
 import styles from "./styles.module.css";
 
 export default function Home() {
+  useEffect(() => {
+    aos.init({ once: true });
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -20,6 +27,9 @@ export default function Home() {
 
       <div className={styles.about}>
         <img src={photo} alt="Daniel Padilha" className={styles.photo} />
+        <strong>Daniel José Padilha</strong>
+        <small>Análise e Desenvolvimento de Sistemas</small>
+        <small>Javascript Developer</small>
         <div className={styles.mediaLinks}>
           <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
             linkedIn
@@ -28,61 +38,66 @@ export default function Home() {
         </div>
 
         <h2>Olá!</h2>
-        <p>Meu nome é Daniel José Padilha, e sou apaixonado por JavaScript!</p>
+        <p>
+          Meu nome é Daniel José Padilha, técnlogo em análise e desenvolvimento
+          de sistemas, e sou apaixonado por JavaScript!
+        </p>
         <p>
           {" "}
-          Desenvolvi meus primeiros projetos com a tecnologia no inicio do ano
-          de 2019 e fiquei fascinado pela praticidade e o quão poderosa tal
-          linguagem era. Desde então, procurei aprender as melhores formas de
-          utilizá-la, e pude encontrar a Stack React, React Native e NodeJS, da
-          qual agradeço até hoje pela escolha.{" "}
+          Desenvolvi meus primeiros projetos com Javascript no inicio do ano de
+          2019 e fiquei fascinado pela praticidade e o quão poderosa ela é.
+          Desde então, procurei aprender as melhores formas de utilizá-la, e
+          pude encontrar a Stack React, React Native e NodeJS, da qual sempre
+          utilizo em meus projetos.
         </p>
 
         <div className={styles.projects}>
           <h2>Projetos</h2>
           <p>
-            Pude particiar de alguns projetos muito interessantes, e
-            apresentarei alguns que fiz enquanto me divertia aprendendo com a
-            linguagem!
+            Pude participar de projetos muito interessantes, e apresentarei
+            alguns que fiz enquanto me divertia aprendendo com a linguagem!
           </p>
           <p>
-            Para ver mais sobre <a href="/projetos">Clique aqui</a>
+            Para ver mais sobre, <a href="/projetos">Clique aqui</a>
           </p>
         </div>
+        <h2>Conhecimentos</h2>
 
-        <div className={styles.courses}>
-          <h2>Cursos</h2>
-          <p>
-            Durante essa caminhada, alguns cursos puderam me passar os
-            conhecimentos necessários para criar as aplicações que eu gostaria
-            de criar, dentre eles são:
-          </p>
-
-          <img src={coderLogo} alt="coder logo" />
-          <a
-            href="https://www.udemy.com/course/curso-reactjs-ninja/"
-            className={styles.coursesLinks}
+        <div className={styles.knowlodges}>
+          <div
+            className={styles.knowlodgesContainer}
+            data-aos="fade-up"
+            data-aos-duration="1000"
           >
-            Curso React.JS Ninja, na Udemy
-          </a>
-          <p>
-            Este curso me ensinou a base e os conceitos necessários para
-            desenvolver meus primeiros projetos com React
-          </p>
-
-          <img src={goStackLogo} alt="coder logo" />
-          <a
-            href="https://rocketseat.com.br/gostack"
-            className={styles.coursesLinks}
+            <img src={nodeLogo} alt="NodeJS" />
+            <h3>NodeJS</h3>
+            <small>ExpressJS</small>
+            <small>AdonisJS</small>
+            <small>Conhecimentos em BD (MySQL, Postgres, mongoDB)</small>
+            <small>Testes</small>
+          </div>
+          <div
+            className={styles.knowlodgesContainer}
+            data-aos="fade-up"
+            data-aos-duration="1250"
           >
-            Bootcamp GoStack da Rocketseat
-          </a>
-          <p>
-            Depois de práticar por um tempo, percebi que queria levar as minhas
-            aplicações para um nível mais profissional, para entregar o projeto
-            com a melhor qualidade possível , e o GoStack da Rocketseat consegue
-            ensinar isso com maestria!
-          </p>
+            <img src={reactLogo} alt="ReactJS" />
+            <h3>React</h3>
+            <small>React Hooks</small>
+            <small>Redux</small>
+            <small>Testes</small>
+          </div>
+          <div
+            className={styles.knowlodgesContainer}
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <img src={reactLogo} alt="React Native" />
+            <h3>React Native</h3>
+            <small>React Hooks</small>
+            <small>Redux</small>
+            <small>Testes</small>
+          </div>
         </div>
 
         <footer>

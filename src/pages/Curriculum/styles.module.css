@@ -45,8 +45,8 @@ a {
   }
 }
 
-.user-info {
-  grid-area: user-info;
+.userInfo {
+  grid-area: userInfo;
 }
 
 .photo {
@@ -57,8 +57,8 @@ a {
   grid-area: about;
 }
 
-.work-exps {
-  grid-area: work-exps;
+.workExps {
+  grid-area: workExps;
 }
 .education {
   grid-area: education;
@@ -67,78 +67,42 @@ a {
 .knowlodges {
   grid-area: knowlodges;
 }
-
-.social-media {
-  grid-area: social-media;
+.courses {
+  grid-area: courses;
 }
 .container {
   grid-template-areas:
-    "user-info photo"
-    "work-exps about"
-    "education knowlodges";
+    "userInfo photo"
+    "workExps knowlodges"
+    "education knowlodges"
+    "courses courses";
 }
-
-@media (max-width: 800px) {
-  .container {
-    grid-gap: 0px;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "photo"
-      "about"
-      "user-info"
-      "work-exps"
-      "education"
-      "knowlodges";
-  }
-  .about h2,
-  .user-info h2 {
-    display: none;
-  }
-  .about {
-    font-size: 22px;
-    color: #ae9878;
-    font-weight: bold;
-  }
-  .media-links {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .container .user-info,
-  .photo,
-  .about {
-    align-self: center;
-    justify-self: center;
-  }
-
-  .work-exps,
-  .education,
-  .knowlodges {
-    margin-top: 40px;
-  }
+.about strong {
+  display: none;
 }
-
+.workExps,
+.knowlodges {
+  margin-top: 10px;
+}
 .container h2 {
   color: #59504d;
   margin-bottom: 20px;
 }
-.user-info strong {
+.userInfo strong {
   font-size: 18px;
 }
-.user-info span {
+.userInfo span {
   display: block;
   font-size: 16px;
 }
-.user-info small {
+.userInfo small {
   font-size: 14px;
 }
 
-.user-info .media-links {
+.userInfo .mediaLinks {
   margin-top: 10px;
 }
-.user-info .media-links a {
+.userInfo .mediaLinks a {
   margin-left: 5px;
 }
 .photo img {
@@ -147,16 +111,13 @@ a {
   border-radius: 20px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
 }
-.about strong {
-  display: block;
-  font-weight: 400;
-}
+
 .company img {
   float: left;
   width: 60px;
   height: 60px;
   border-radius: 10px;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 5px 0p rgba(0, 0, 0, 0.15);
   margin-right: 20px;
 }
 .company strong {
@@ -170,6 +131,8 @@ a {
 }
 .company small {
   font-weight: 600;
+  display: block;
+  margin-bottom: 20px;
 }
 .institution img {
   float: left;
@@ -196,7 +159,86 @@ a {
   border-bottom: 1px solid #e9eae6;
   padding: 8px 0 8px 0;
 }
-
+.courses h2 {
+  color: #59504d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.coursesGrid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.courseItem {
+  text-align: center;
+  margin-top: 40px;
+}
+.courseItem img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.courseItem strong {
+  font-size: 18px;
+  display: block;
+}
+.courseItem span {
+  font-size: 14px;
+  display: block;
+}
+.courseItem small {
+  font-weight: 600;
+}
 footer {
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "about"
+      "userInfo"
+      "workExps"
+      "education"
+      "knowlodges"
+      "courses";
+  }
+
+  .userInfo h2 {
+    display: none;
+  }
+  .about strong {
+    font-size: 22px;
+    color: #ae9878;
+    font-weight: bold;
+    display: block;
+  }
+  .mediaLinks {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .container .userInfo,
+  .photo,
+  .about {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .workExps,
+  .education,
+  .knowlodges {
+    margin-top: 40px;
+  }
+
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

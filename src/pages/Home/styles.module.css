@@ -21,6 +21,10 @@ a {
   color: #c4b094;
   text-decoration: none;
 }
+a:hover {
+  color: #ae9878;
+  transition: all 0.1s;
+}
 .header a {
   display: inline-block;
   font-size: 18px;
@@ -47,9 +51,15 @@ a {
   }
 }
 
-.about h1 {
-  color: #cdbfa7;
-  font-size: 42px;
+.about strong {
+  color: #59504d;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+.about small {
+  font-size: 14px;
+  display: block;
   text-align: center;
 }
 .about .photo {
@@ -58,7 +68,6 @@ a {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  box-shadow: 0px 5px 8px 0px rgb(116, 115, 116);
 }
 
 .mediaLinks {
@@ -88,27 +97,40 @@ p {
   font-size: 18px;
   text-align: left;
 }
-
-.courses .coursesLinks {
-  display: block;
+.knowlodges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.knowlodgesContainer {
   text-align: center;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 40px;
+  transition: transform 0.2s;
 }
 
-.courses img {
+.knowlodges img {
   display: block;
   margin: auto;
-  width: 150px;
+  width: 200px;
   height: 150px;
-  border-radius: 50%;
 
   margin: 40px auto 20px auto;
-  box-shadow: 0px 5px 16px 0px rgba(179, 175, 179, 1);
 }
-
+.knowlodges h3 {
+  color: #ae9878;
+  font-size: 22px;
+  font-weight: 600;
+}
+.knowlodges small {
+  display: block;
+  font-weight: 300;
+  color: #59504d;
+}
 footer {
   margin-top: 100px;
   text-align: center;
+}
+
+@media (max-width: 500px) {
+  .knowlodges {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

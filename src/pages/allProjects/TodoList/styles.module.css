@@ -1,8 +1,7 @@
-
 .title {
   margin-top: 2%;
   text-align: center;
-  color: #59504D;
+  color: #59504d;
 }
 .content {
   max-width: 1200px;
@@ -14,7 +13,7 @@
   align-items: flex-start;
 }
 
-aside {
+.newTodo {
   width: 300px;
   min-width: 300px;
   background: #fff;
@@ -24,14 +23,14 @@ aside {
   margin-top: 60px;
 }
 
-aside label {
+.newTodo label {
   color: #acacac;
   font-size: 14px;
   font-weight: bold;
   display: block;
 }
 
-aside input {
+.newTodo input {
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -40,7 +39,7 @@ aside input {
   border-bottom: 1px solid #999;
 }
 
-aside #addTodo {
+.newTodo #addTodo {
   width: 100%;
   margin: 0 auto;
   border: none;
@@ -54,7 +53,7 @@ aside #addTodo {
   cursor: pointer;
 }
 
-aside #addTodo:hover {
+.newTodo #addTodo:hover {
   background: #ae9878;
   transition: background 0.5s;
 }
@@ -63,9 +62,9 @@ aside #addTodo:hover {
   margin-left: 80px;
   flex: 1;
 }
-.list h2{
+.list h2 {
   text-align: center;
-  color: #AE9878;
+  color: #ae9878;
   margin-bottom: 20px;
 }
 #todo {
@@ -78,7 +77,7 @@ aside #addTodo:hover {
   width: 250px;
   min-height: 125px;
   height: auto;
-  background: #E9EAE6;
+  background: #e9eae6;
   border: 1px solid rgb(201, 194, 194);
   border-radius: 10px;
   margin: 0 10px;
@@ -86,7 +85,7 @@ aside #addTodo:hover {
   flex-direction: column;
   align-items: center;
   box-shadow: 0 8px 6px -8px black;
-  -webkit-animation: fadein 1.0s;
+  -webkit-animation: fadein 1s;
 }
 @-webkit-keyframes fadein {
   from {
@@ -96,23 +95,23 @@ aside #addTodo:hover {
     opacity: 1;
   }
 }
-.todoItem button{
+.todoItem button {
   font-size: 18px;
   margin: 10px 20px 0 auto;
   font-weight: 600;
   border: none;
-  background: #E9EAE6;
-  color: #CDBFA7;
+  background: #e9eae6;
+  color: #cdbfa7;
   cursor: pointer;
 }
 
 .todoItem strong {
   font-size: 18px;
   margin-top: 10%;
-  color: #59504D;
+  color: #59504d;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   #todo {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -123,14 +122,13 @@ aside #addTodo:hover {
     width: 100%;
     flex-direction: column;
   }
-  aside {
+  .newTodo {
     width: 100%;
   }
   .list h2 {
     margin-top: 50px;
   }
   #todo {
-    
     grid-template-columns: 1fr;
   }
 }
