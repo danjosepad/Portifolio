@@ -3,13 +3,15 @@ import React, { useState, useEffect } from "react";
 // import "./styles.css";
 import aos from "aos";
 import calculadoraGif from "../../assets/giphy.gif";
-import anotacoesImg from "../../assets/anotacoes.jpg";
-import todolistImg from "../../assets/todolist.jpg";
 
 import appScreensPeerClass from "../../assets/appScreensPeerClass.png";
 import appScreensTindev from "../../assets/appScreensTindev.png";
 import appScreensAircnc from "../../assets/appScreensAircnc.png";
 import appScreensDevRadar from "../../assets/appScreensDevRadar.png";
+import appScreenAppleClone from "../../assets/appScreenAppleClone.png";
+import appScreenAnotacoes from "../../assets/appScreenAnotacoes.png";
+import appScreenTodoList from "../../assets/appScreenTodoList.png";
+import appScreensInstaRocket from "../../assets/appScreensInstaRocket.png";
 
 import logoConceitosNodeJS from "../../assets/logoConceitosNodeJS.png";
 import logoGoBarber from "../../assets/logoGoBarber.png";
@@ -131,6 +133,17 @@ export default function Projetos() {
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
+                <img src={appScreenAppleClone} alt="Clone Apple" />
+                <h2>
+                  <a href="projetos/clone-apple">Apple</a>
+                </h2>
+                <p>Clone da página Inicial da Apple</p>
+              </div>
+              <div
+                className={styles.projectsContent}
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
                 <img src={calculadoraGif} alt="gif calculadora" />
                 <h2>
                   <a href="projetos/calculadoraJS">CalculadoraJS</a>
@@ -148,7 +161,7 @@ export default function Projetos() {
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
-                <img src={todolistImg} alt="Foto Todo-List" />
+                <img src={appScreenTodoList} alt="Foto Todo-List" />
                 <h2>
                   <a href="projetos/todo-list">Todo List</a>
                 </h2>
@@ -167,7 +180,7 @@ export default function Projetos() {
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
-                <img src={anotacoesImg} alt="Foto AnotacoesJS" />
+                <img src={appScreenAnotacoes} alt="Foto AnotacoesJS" />
                 <h2>
                   <a href="projetos/anotacoesJS">AnotacoesJS</a>
                 </h2>
@@ -211,6 +224,7 @@ export default function Projetos() {
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
+                <img src={appScreensInstaRocket} alt="InstaRocket" />
                 <h2>
                   <a href="https://github.com/danjosepad/semana-omnistack-7">
                     Instarocket

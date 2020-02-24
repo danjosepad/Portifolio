@@ -1,0 +1,263 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  min-height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+}
+.header a {
+  color: #a1a1a1;
+  font-size: 12px;
+}
+.header img {
+  width: 15px;
+}
+.icon {
+  display: none;
+}
+#container section {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+#container strong,
+small,
+h2,
+p {
+  filter: blur(0.2px);
+}
+#iPhone11,
+#iPhone11Pro,
+#watchSeries5 {
+  height: 100vh;
+  margin-bottom: 15px;
+}
+#container section strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+}
+#container section small {
+  display: block;
+}
+#container section strong:nth-child(1) {
+  padding-top: 20vh;
+}
+
+#container #iPhone11Pro strong {
+  color: white;
+}
+#container #watchSeries5 strong:nth-child(1) {
+  padding-top: 25vh;
+}
+.mediaLinks {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+.mediaLinks a {
+  color: #2997f1;
+  font-size: 18px;
+}
+.mediaLinks a:hover {
+  text-decoration: underline;
+}
+#iPhone11Pro {
+  background: url("../../../assets/cloneApple/iPhone11Pro.png");
+}
+
+#iPhone11 {
+  background: url("../../../assets/cloneApple/iPhone11.png");
+}
+#watchSeries5 {
+  background: url("../../../assets/cloneApple/watchSeries.png");
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 15px 15px 15px;
+  gap: 15px;
+}
+.sectionGrid section {
+  height: 90vh;
+}
+.sectionGrid section h2:nth-child(1) {
+  padding-top: 40px;
+}
+.sectionGrid section h2 {
+  font-weight: 600;
+  font-size: 32px;
+}
+.sectionGrid section small {
+  font-size: 18px;
+}
+
+#carnaval {
+  background: url("../../../assets/cloneApple/carnaval.png");
+}
+#beats {
+  background: url("../../../assets/cloneApple/beats.png");
+}
+#airPods {
+  background: url("../../../assets/cloneApple/airPods.png");
+  color: #f5f5f7;
+}
+
+#iPad {
+  background: url("../../../assets/cloneApple/iPad.png");
+}
+
+#appleTV {
+  background: url("../../../assets/cloneApple/appleTV.png");
+}
+
+#appleTV a {
+  font-size: 14px;
+  padding-top: 53vh;
+  width: 120px;
+}
+
+#Arcade {
+  background: url("../../../assets/cloneApple/arcade.png");
+}
+
+#Arcade a {
+  padding-top: 25vh;
+  font-size: 15px;
+  color: #fffffb;
+}
+#arCade a:hover {
+  text-decoration-line: underline;
+}
+
+#info {
+  background: #f5f5f7;
+  padding: 10vh 20vh 10vh 20vh;
+}
+#info p {
+  color: #8b8898;
+  font-size: 11px;
+  text-align: left;
+}
+
+#infoLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+#infoLinks div strong {
+  margin-top: 15px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+#infoLinks div small {
+  color: #53565a;
+  margin-top: 10px;
+  display: block;
+  font-size: 11px;
+}
+
+.findAndBuy {
+  grid-area: findAndBuy;
+}
+.services {
+  grid-area: services;
+}
+.yourAccount {
+  grid-area: yourAccount;
+}
+.appleStore {
+  grid-area: appleStore;
+}
+.forCompanies {
+  grid-area: forCompanies;
+}
+.forEducation {
+  grid-area: forEducation;
+}
+.forHealth {
+  grid-area: forHealth;
+}
+.appleValues {
+  grid-area: appleValues;
+}
+.aboutApple {
+  grid-area: aboutApple;
+}
+#infoLinks {
+  grid-template-areas:
+    "findAndBuy services appleStore forCompanies appleValues"
+    "findAndBuy yourAccount appleStore forEducation aboutApple"
+    "findAndBuy yourAccount appleStore forHealth aboutApple";
+}
+
+@media (max-width: 800px) {
+  .sectionGrid {
+    grid-template-columns: 1fr;
+  }
+  #container section strong {
+    font-size: 16px;
+  }
+  .mediaLinks a {
+    font-size: 18px;
+  }
+  .sectionGrid {
+    margin: 0 0 15px 0;
+  }
+  .sectionGrid section h2 {
+    font-size: 24px;
+  }
+  .sectionGrid section small {
+    margin-top: -5px;
+    font-size: 14px;
+  }
+  #info {
+    padding: 10vh 5vh 10vh 5vh;
+  }
+  #infoLinks {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "findAndBuy"
+      "services"
+      "yourAccount"
+      "appleStore"
+      "forCompanies"
+      "forEducation"
+      "forHealth"
+      "appleValues"
+      "aboutApple";
+  }
+  .header {
+    justify-content: space-around;
+  }
+  .icon {
+    display: block;
+  }
+  .header a:not(:first-child):not(:nth-child(2)):not(:nth-child(11)) {
+    display: none;
+  }
+  .header.responsive {
+    position: relative;
+  }
+  .header.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

@@ -111,18 +111,21 @@ a {
   border-radius: 20px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
 }
-
+.company,
+.institution {
+  display: grid;
+  grid-template-columns: 60px auto;
+  gap: 15px;
+  margin-bottom: 20px;
+}
 .company img {
-  float: left;
   width: 60px;
   height: 60px;
   border-radius: 10px;
   box-shadow: 0px 5px 5px 0p rgba(0, 0, 0, 0.15);
-  margin-right: 20px;
 }
 .company strong {
   font-size: 18px;
-  margin-top: 20px;
   display: block;
 }
 .company p {
@@ -135,16 +138,13 @@ a {
   margin-bottom: 20px;
 }
 .institution img {
-  float: left;
   width: 60px;
   height: 60px;
   border-radius: 10px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
-  margin-right: 20px;
 }
 .institution strong {
   font-size: 18px;
-  margin-top: 20px;
   display: block;
 }
 .institution p {

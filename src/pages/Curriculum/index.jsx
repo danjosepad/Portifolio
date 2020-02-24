@@ -51,33 +51,39 @@ export default function Curriculo() {
           <h2>Experiências</h2>
           <div className={styles.company}>
             <img src={yamanLogo} alt="Yaman" />
-
-            <strong>Técnico de Desempenho 2</strong>
-            <p>Yaman Tecnologia</p>
-            <small>3 meses, São Paulo - SP</small>
+            <div className={styles.details}>
+              <strong>Técnico de Desempenho 2</strong>
+              <p>Yaman Tecnologia</p>
+              <small>3 meses, São Paulo - SP</small>
+            </div>
           </div>
 
           <div className={styles.company}>
             <img src={fatecOurinhosLogo} alt="Fatec Ourinhos" />
-
-            <strong>Estagio Fullstack NodeJS, React e React Native</strong>
-            <p>FATEC Faculdade de Tecnologia de Ourinhos</p>
-            <small>5 meses, Ourinhos - SP</small>
+            <div className={styles.details}>
+              <strong>Estagio Fullstack NodeJS, React e React Native</strong>
+              <p>FATEC Faculdade de Tecnologia de Ourinhos</p>
+              <small>5 meses, Ourinhos - SP</small>
+            </div>
           </div>
         </div>
         <div className={styles.education}>
           <h2>Formação Academica</h2>
           <div className={styles.institution}>
             <img src={fatecOurinhosLogo} alt="Fatec Ourinhos" />
-            <strong>FATEC Ourinhos Faculdade de Tecnologia</strong>
-            <p>Tecnólogo, Análise e Desenvolvimento de Sistemas</p>
-            <small>2017 - 2019</small>
+            <div className={styles.details}>
+              <strong>FATEC Ourinhos Faculdade de Tecnologia</strong>
+              <p>Tecnólogo, Análise e Desenvolvimento de Sistemas</p>
+              <small>2017 - 2019</small>
+            </div>
           </div>
           <div className={styles.institution}>
             <img src={rocketseatLogo} alt="Rocketseat" />
-            <strong>Rocketseat - GoStack</strong>
-            <p>Fullstack (ReactJS, React Native e NodeJS)</p>
-            <small>2020 - Atual </small>
+            <div className={styles.details}>
+              <strong>Rocketseat - GoStack</strong>
+              <p>Fullstack (ReactJS, React Native e NodeJS)</p>
+              <small>2020 - Atual </small>
+            </div>
           </div>
         </div>
         <div className={styles.knowlodges}>
