@@ -135,7 +135,7 @@ export default function Projetos() {
               >
                 <img src={appScreenAppleClone} alt="Clone Apple" />
                 <h2>
-                  <a href="projetos/clone-apple">Apple</a>
+                  <a href="/projetos/apple">Apple</a>
                 </h2>
                 <p>Clone da página Inicial da Apple</p>
               </div>

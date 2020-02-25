@@ -19,7 +19,7 @@ export default function Routes() {
         <Route path="/projetos/anotacoesJS" exact component={AnotacoesJS} />
         <Route path="/projetos/todo-list" exact component={TodoList} />
         <Route path="/projetos/CalculadoraJS" exact component={CalculadoraJS} />
-        <Route path="/projetos/clone-apple" exact component={CloneApple} />
+        <Route path="/projetos/apple" exact component={CloneApple} />
         <Route path="/curriculo" exact component={Curriculum} />
       </Switch>
     </BrowserRouter>

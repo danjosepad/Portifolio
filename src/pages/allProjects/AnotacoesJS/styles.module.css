@@ -38,9 +38,12 @@
   border-bottom: 1px solid #a2c3dc;
   border-right: 1px solid #d9d9d9;
 }
+.topMenu h2 {
+  padding: 5px 0 0px 20px;
+  font-size: 22px;
+}
 .topMenu strong {
-  padding: 10px 0 0 20px;
-  font-size: 18px;
+  color: #61dafb;
 }
 .topMenu img {
   height: 25px;

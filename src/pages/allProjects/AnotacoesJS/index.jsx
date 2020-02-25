@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import aos from "aos";
 import styles from "./styles.module.css";
+import "aos/dist/aos.css";
 
 export default function AnotacoesJS() {
   const [folders, setFolders] = useState([]);
@@ -22,6 +24,10 @@ export default function AnotacoesJS() {
 
   const [annotationBtn, setAnnotationBtn] = useState(true);
 
+  useEffect(() => {
+    aos.init();
+  }, []);
+
   const handleModal = () => setShow(!show);
 
   const addNewFolder = name => {
@@ -34,6 +40,7 @@ export default function AnotacoesJS() {
     setFolderId(newFolder.id);
     setAnnotationBtn(false);
     handleModal();
+    addNewAnnotation(folderId);
   };
 
   const addNewAnnotation = id => {
@@ -53,6 +60,9 @@ export default function AnotacoesJS() {
 
   const manageAnnotation = id => {
     setShowAnnotation(true);
+    const index = annotations.findIndex(Annotation => Annotation.id === id);
+    setAnnotationTitle(annotations[index].name);
+    setAnnotationText(annotations[index].text);
     setAnnotationId(id);
   };
 
@@ -75,7 +85,10 @@ export default function AnotacoesJS() {
     <div id={styles.container}>
       <div className={styles.menu}>
         <div className={styles.topMenu}>
-          <strong>Anotações</strong>
+          <h2>
+            Anotações
+            <strong>JS</strong>
+          </h2>
           <button
             type="button"
             id={styles.addAnnotation}
@@ -144,7 +157,11 @@ export default function AnotacoesJS() {
           ))}
         </div>
       </div>
-      <div className={styles.annotation}>
+      <div
+        className={styles.annotation}
+        data-aos="fade-up"
+        data-aos-duration="500"
+      >
         {showAnnotation && (
           <>
             <button type="button" onClick={() => saveAnnotation(annotationId)}>

@@ -61,7 +61,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 25px;
+  gap: 25px !important;
 }
 .mediaLinks a {
   color: #2997f1;
@@ -203,6 +203,12 @@ p {
 }
 
 @media (max-width: 800px) {
+  #iPhone11 {
+    background: url("../../../assets/cloneApple/iPhone11resp.png");
+  }
+  #watchSeries5 {
+    background: url("../../../assets/cloneApple/watchSeriesresp.png");
+  }
   .sectionGrid {
     grid-template-columns: 1fr;
   }

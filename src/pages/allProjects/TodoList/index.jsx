@@ -1,23 +1,26 @@
-import React, { useState } from 'react';
-import styles from './styles.module.css';
+import React, { useState } from "react";
+import styles from "./styles.module.css";
 
 export default function TodoList() {
-  const [todoText, setTodoText] = useState('');
+  const [todoText, setTodoText] = useState("");
   const [todos, setTodos] = useState([]);
 
   const addTodo = () => {
     if (todoText) {
-      setTodos([...todos, {
-        text: todoText,
-        id: Math.random(),
-      }]);
+      setTodos([
+        ...todos,
+        {
+          text: todoText,
+          id: Math.random()
+        }
+      ]);
 
-      setTodoText('');
+      setTodoText("");
     }
   };
-  const removeTodo = (id) => {
+  const removeTodo = id => {
     const todoList = [...todos];
-    const index = todoList.findIndex((Todo) => Todo.id === id);
+    const index = todoList.findIndex(Todo => Todo.id === id);
 
     todoList.splice(index, 1);
     setTodos(todoList);
@@ -33,16 +36,20 @@ export default function TodoList() {
             id={styles.inputTodo}
             placeholder="Digite uma nova tarefa"
             value={todoText}
-            onChange={(e) => setTodoText(e.target.value)}
+            onChange={e => setTodoText(e.target.value)}
           />
-          <button type="button" id={styles.addTodo} onClick={() => addTodo()}>Cadastrar</button>
+          <button type="button" id={styles.addTodo} onClick={() => addTodo()}>
+            Cadastrar
+          </button>
         </aside>
-        <main className="list">
+        <main className={styles.list}>
           <h2>Suas tarefas</h2>
-          <div id="todo">
-            {todos.map((todo) => (
+          <div id={styles.todo}>
+            {todos.map(todo => (
               <div className={styles.todoItem} key={todo.id}>
-                <button type="button" onClick={() => removeTodo(todo.id)}>X</button>
+                <button type="button" onClick={() => removeTodo(todo.id)}>
+                  X
+                </button>
                 <strong>{todo.text}</strong>
               </div>
             ))}
