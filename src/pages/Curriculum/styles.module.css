@@ -217,6 +217,7 @@ footer {
     color: #ae9878;
     font-weight: bold;
     display: block;
+    text-align: center;
   }
   .mediaLinks {
     margin-top: 20px;

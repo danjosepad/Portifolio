@@ -1,0 +1,171 @@
+#container {
+  background: #e9ebee;
+}
+#header {
+  min-height: 50px;
+  background: #4267b2;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#gridContainer {
+  display: grid;
+  grid-template-columns: 200px 520px 300px auto;
+  gap: 10px;
+}
+/*
+.sideMenu {
+  display: grid;
+  grid-template-columns: 20px 100px;
+  gap: 5px;
+}
+*/
+
+.sideMenu {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 40px auto;
+  row-gap: 10px;
+  height: 200px;
+  padding: 10px 0 0 20px;
+}
+.sideMenu strong {
+  display: block;
+}
+.sideMenu img {
+  width: 22px;
+  border-radius: 50%;
+}
+.feed {
+  width: 100%;
+}
+.newPost {
+  background: white;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e1e3e6;
+}
+.newPost .title {
+  background: #f5f6f7;
+}
+.newPost .title strong {
+}
+.postContent {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  row-gap: 5px;
+  height: 100px;
+  padding: 10px 0 20px 0px;
+}
+.actions {
+}
+
+.newPost .postContent img {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px 0 10px;
+  border-radius: 50%;
+}
+.newPost textarea {
+  resize: none;
+  border: none;
+  width: 90%;
+  margin-top: 10px;
+  overflow-y: hidden;
+}
+.post {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e1e3e6;
+  background: #ffffff;
+}
+.post .title,
+.post p {
+  display: flex;
+  flex-direction: row;
+}
+
+.post .title,
+.post p {
+  padding: 20px 0 0 20px;
+}
+.post .title img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.post .title strong {
+  display: block;
+}
+.post strong {
+  color: #385898;
+}
+.post img {
+  width: 100%;
+  height: 600px;
+}
+.sponsors {
+  margin-top: 20px;
+
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e1e3e6;
+  background: #ffffff;
+  padding: 10px;
+}
+.sponsors h2 {
+  color: #776770;
+  font-size: 14px;
+  font-weight: 600;
+}
+.sponsors strong {
+  display: block;
+}
+.sponsors img {
+  width: 100%;
+}
+.rightMenu {
+  border: 1px solid #d6d6d7;
+  margin-left: 10px;
+}
+.rightMenu strong {
+  display: block;
+  color: #4a4a4a;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.games {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  justify-content: center;
+  gap: 10px;
+}
+.games img {
+  width: 50px;
+  border-radius: 50%;
+}
+.chat {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 40px auto;
+  row-gap: 10px;
+  padding: 10px 0 0 10px;
+}
+.chat img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.sideMenu,
+.sponsors,
+.rightMenu {
+  position: ;
+}

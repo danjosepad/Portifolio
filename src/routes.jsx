@@ -9,6 +9,7 @@ import AnotacoesJS from "./pages/allProjects/AnotacoesJS/index";
 import TodoList from "./pages/allProjects/TodoList/index";
 import CalculadoraJS from "./pages/allProjects/CalculadoraJS/index";
 import CloneApple from "./pages/allProjects/CloneApple/index";
+import Facebook from "./pages/allProjects/CloneFacebook/index";
 
 export default function Routes() {
   return (
@@ -20,6 +21,7 @@ export default function Routes() {
         <Route path="/projetos/todo-list" exact component={TodoList} />
         <Route path="/projetos/CalculadoraJS" exact component={CalculadoraJS} />
         <Route path="/projetos/apple" exact component={CloneApple} />
+        <Route path="/projetos/facebook" exact component={Facebook} />
         <Route path="/curriculo" exact component={Curriculum} />
       </Switch>
     </BrowserRouter>
