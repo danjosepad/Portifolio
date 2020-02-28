@@ -1,7 +1,3 @@
-<h1 align="center">
-    <img alt="Portifolio" title="titleImage" src=".github/logo.png" width="250px" />
-</h1>
-
 <h4 align="center">
   🚀 Portifolio
 </h4>
@@ -30,7 +26,7 @@
 <br>
 
 <p align="center">
-  <img alt="appScreens" src=".github/appScreens.png" width="100%">
+  <img alt="appScreens" src=".github/appScreensPortifolio.png" width="100%">
 </p>
 
 ## :rocket: Tecnologias
