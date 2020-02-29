@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import aos from "aos";
-import styles from "./styles.module.css";
-import photo from "../../assets/resizedPhoto.png";
+import aos from 'aos';
+import styles from './styles.module.css';
+import photo from '../../assets/resizedPhoto.png';
 
-import yamanLogo from "../../assets/yamanLogo.png";
-import fatecOurinhosLogo from "../../assets/fatecOurinhosLogo.jpg";
-import rocketseatLogo from "../../assets/rocketseatLogo.jpg";
-import udemyLogo from "../../assets/udemyLogo.jpg";
-import fundacaoBradescoLogo from "../../assets/fundacaoBradescoLogo.jpg";
-import interasoftLogo from "../../assets/interasoftLogo.png";
+import yamanLogo from '../../assets/yamanLogo.png';
+import fatecOurinhosLogo from '../../assets/fatecOurinhosLogo.jpg';
+import rocketseatLogo from '../../assets/rocketseatLogo.jpg';
+import udemyLogo from '../../assets/udemyLogo.jpg';
+import fundacaoBradescoLogo from '../../assets/fundacaoBradescoLogo.jpg';
+import interasoftLogo from '../../assets/interasoftLogo.png';
 
-import "aos/dist/aos.css";
+import 'aos/dist/aos.css';
 
 export default function Curriculo() {
   useEffect(() => {
@@ -226,11 +226,16 @@ export default function Curriculo() {
         </div>
       </div>
       <footer>
-        Site desenvolvido usando ReactJS, por{" "}
+        Site desenvolvido usando ReactJS, por
+        {' '}
         <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
           Daniel José Padilha
-        </a>{" "}
-        - © {new Date().getFullYear()}{" "}
+        </a>
+        {' '}
+        - ©
+        {' '}
+        {new Date().getFullYear()}
+        {' '}
       </footer>
     </>
   );

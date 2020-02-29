@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
-import aos from "aos";
-import styles from "./styles.module.css";
-import "aos/dist/aos.css";
+import aos from 'aos';
+import styles from './styles.module.css';
+import 'aos/dist/aos.css';
 
 export default function AnotacoesJS() {
   const [folders, setFolders] = useState([]);
   const [annotations, setAnnotations] = useState([]);
 
-  const [folderName, setFolderName] = useState("");
+  const [folderName, setFolderName] = useState('');
   const [folderId, setFolderId] = useState(0);
 
-  const [annotationTitle, setAnnotationTitle] = useState("");
-  const [annotationText, setAnnotationText] = useState("");
+  const [annotationTitle, setAnnotationTitle] = useState('');
+  const [annotationText, setAnnotationText] = useState('');
   const [annotationId, setAnnotationId] = useState(0);
 
   const [show, setShow] = useState(false);
@@ -30,10 +30,10 @@ export default function AnotacoesJS() {
 
   const handleModal = () => setShow(!show);
 
-  const addNewFolder = name => {
+  const addNewFolder = (name) => {
     const newFolder = {
       name,
-      id: Math.random()
+      id: Math.random(),
     };
 
     setFolders([...folders, newFolder]);
@@ -43,31 +43,31 @@ export default function AnotacoesJS() {
     addNewAnnotation(folderId);
   };
 
-  const addNewAnnotation = id => {
+  const addNewAnnotation = (id) => {
     const newAnnotation = {
-      name: "Rascunho",
-      text: "",
+      name: 'Rascunho',
+      text: '',
       id: Math.random(),
-      folder_id: id
+      folder_id: id,
     };
 
     setAnnotations([...annotations, newAnnotation]);
 
-    setAnnotationTitle("");
-    setAnnotationText("");
+    setAnnotationTitle('');
+    setAnnotationText('');
     setAnnotationBtn(false);
   };
 
-  const manageAnnotation = id => {
+  const manageAnnotation = (id) => {
     setShowAnnotation(true);
-    const index = annotations.findIndex(Annotation => Annotation.id === id);
+    const index = annotations.findIndex((Annotation) => Annotation.id === id);
     setAnnotationTitle(annotations[index].name);
     setAnnotationText(annotations[index].text);
     setAnnotationId(id);
   };
 
-  const saveAnnotation = id => {
-    const index = annotations.findIndex(Annotation => Annotation.id === id);
+  const saveAnnotation = (id) => {
+    const index = annotations.findIndex((Annotation) => Annotation.id === id);
 
     const values = [...annotations];
     annotations[index].name = annotationTitle;
@@ -78,7 +78,7 @@ export default function AnotacoesJS() {
 
   // eslint-disable-next-line prefer-const
   let listAnnotations = annotations.filter(
-    annotation => annotation.folder_id === folderId
+    (annotation) => annotation.folder_id === folderId,
   );
 
   return (
@@ -102,7 +102,7 @@ export default function AnotacoesJS() {
           </button>
         </div>
         <div className={styles.itemsMenu}>
-          {folders.map(folder => (
+          {folders.map((folder) => (
             <>
               <button type="button" onClick={() => setFolderId(folder.id)}>
                 {folder.name}
@@ -126,7 +126,7 @@ export default function AnotacoesJS() {
                 type="text"
                 placeholder="Nome da pasta"
                 value={folderName}
-                onChange={e => setFolderName(e.target.value)}
+                onChange={(e) => setFolderName(e.target.value)}
               />
             </Modal.Body>
             <Modal.Footer>
@@ -143,7 +143,7 @@ export default function AnotacoesJS() {
           </Modal>
         </div>
         <div className={styles.itemsList}>
-          {listAnnotations.map(annotation => (
+          {listAnnotations.map((annotation) => (
             <div className={styles.newText} key={annotation.id}>
               <strong
                 role="button"
@@ -171,12 +171,12 @@ export default function AnotacoesJS() {
               type="text"
               placeholder="Digite o titulo aqui"
               value={annotationTitle}
-              onChange={e => setAnnotationTitle(e.target.value)}
+              onChange={(e) => setAnnotationTitle(e.target.value)}
             />
             <textarea
               placeholder="Digite sua anotação"
               value={annotationText}
-              onChange={e => setAnnotationText(e.target.value)}
+              onChange={(e) => setAnnotationText(e.target.value)}
             />
           </>
         )}

@@ -11,46 +11,46 @@ export default function CloneApple() {
   return (
     <div id={styles.container}>
       <div className={styles.header} id={styles.headerTop}>
-        <a className={styles.icon}>
-          <img src={listIcon} />
+        <a href="# " className={styles.icon}>
+          <img src={listIcon} alt="list" />
         </a>
-        <a href="">
-          <img src={appleLogo} />
+        <a href="# ">
+          <img src={appleLogo} alt="apple" />
         </a>
-        <a href="">Mac</a>
-        <a href="">iPad</a>
-        <a href="">iPhone</a>
-        <a href="">Watch</a>
-        <a href="">TV</a>
-        <a href="">Music</a>
-        <a href="">Suporte</a>
-        <a href="">
-          <img src={searchLogo} />
+        <a href="# ">Mac</a>
+        <a href="# ">iPad</a>
+        <a href="# ">iPhone</a>
+        <a href="# ">Watch</a>
+        <a href="# ">TV</a>
+        <a href="# ">Music</a>
+        <a href="# ">Suporte</a>
+        <a href="# ">
+          <img src={searchLogo} alt="search" />
         </a>
-        <a href="">
-          <img src={storeLogo} />
+        <a href="# ">
+          <img src={storeLogo} alt="store" />
         </a>
       </div>
       <section id={styles.iPhone11Pro}>
         <strong>Câmera Pro. Tela Pro. Desempenho Pro.</strong>
         <div className={styles.mediaLinks}>
-          <a href="">Saiba Mais</a>
-          <a href="">Comprar</a>
+          <a href="# ">Saiba Mais</a>
+          <a href="# ">Comprar</a>
         </div>
       </section>
       <section id={styles.iPhone11}>
         <strong>Tudo. Na medida certa.</strong>
         <div className={styles.mediaLinks}>
-          <a href="">Saiba Mais</a>
-          <a href="">Comprar</a>
+          <a href="# ">Saiba Mais</a>
+          <a href="# ">Comprar</a>
         </div>
       </section>
       <section id={styles.watchSeries5}>
         <strong>Com a nova tela Retina Sempre Ativa.</strong>
         <strong>Um relógio como você nunca viu.</strong>
         <div className={styles.mediaLinks}>
-          <a href="">Saiba Mais</a>
-          <a href="">Comprar</a>
+          <a href="# ">Saiba Mais</a>
+          <a href="# ">Comprar</a>
         </div>
       </section>
       <div className={styles.sectionGrid}>
@@ -59,7 +59,7 @@ export default function CloneApple() {
           <h2>iPad para a faculdade,</h2>
           <h2>ganhou um Beats.</h2>
           <div className={styles.mediaLinks}>
-            <a href="">Comprar</a>
+            <a href="# ">Comprar</a>
           </div>
         </section>
         <section id={styles.carnaval}>
@@ -68,15 +68,15 @@ export default function CloneApple() {
           <small>Entre em todos os ritmos com</small>
           <small>as playlists do Apple Music.</small>
           <div className={styles.mediaLinks}>
-            <a href="">Comprar</a>
+            <a href="# ">Comprar</a>
           </div>
         </section>
         <section id={styles.airPods}>
           <h2>AirPods Pro</h2>
           <small>Magia como você nunca ouviu.</small>
           <div className={styles.mediaLinks}>
-            <a href="">Saiba Mais</a>
-            <a href="">Comprar</a>
+            <a href="# ">Saiba Mais</a>
+            <a href="# ">Comprar</a>
           </div>
         </section>
         <section id={styles.iPad}>
@@ -84,21 +84,21 @@ export default function CloneApple() {
           <small>É como um computador.</small>
           <small>Diferente de qualquer computador.</small>
           <div className={styles.mediaLinks}>
-            <a href="">Saiba Mais</a>
-            <a href="">Comprar</a>
+            <a href="# ">Saiba Mais</a>
+            <a href="# ">Comprar</a>
           </div>
         </section>
         <section id={styles.appleTV}>
           {' '}
           <div className={styles.mediaLinks}>
-            <a href="">Assista agora no app Apple TV</a>
+            <a href="# ">Assista agora no app Apple TV</a>
           </div>
         </section>
         <section id={styles.Arcade}>
           {' '}
           <div className={styles.mediaLinks}>
-            <a href="">Saiba Mais</a>
-            <a href="">Teste Gratuito*</a>
+            <a href="# ">Saiba Mais</a>
+            <a href="# ">Teste Gratuito*</a>
           </div>
         </section>
       </div>

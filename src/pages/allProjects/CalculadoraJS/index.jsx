@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import styles from "./styles.module.css";
-
+import styles from './styles.module.css';
+/* eslint no-eval: 0 */
 export default function CalculadoraJS() {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
 
-  const addValue = val => {
+  const addValue = (val) => {
     setValue(value + val);
     console.log(value);
   };
-  const addAction = action => {
+  const addAction = (action) => {
     const val = value.slice(-2);
     if (val.match(/[()%/*+.-]/g) === null) setValue(value + action);
     else {
@@ -19,7 +19,7 @@ export default function CalculadoraJS() {
     }
   };
   const reset = () => {
-    setValue("");
+    setValue('');
   };
   const lastReset = () => {
     setValue(value.substring(0, value.length - 1));
@@ -29,7 +29,7 @@ export default function CalculadoraJS() {
     try {
       setValue(eval(value));
     } catch (e) {
-      setValue("Erro ao calcular :(");
+      setValue('Erro ao calcular :(');
     }
   };
   return (
@@ -41,10 +41,10 @@ export default function CalculadoraJS() {
         </div>
         <div id={styles.buttons}>
           <aside className={styles.numbers}>
-            <button type="button" onClick={() => addAction("(")}>
+            <button type="button" onClick={() => addAction('(')}>
               (
             </button>
-            <button type="button" onClick={() => addAction(")")}>
+            <button type="button" onClick={() => addAction(')')}>
               )
             </button>
             <button type="button" onClick={() => lastReset()}>
@@ -84,7 +84,7 @@ export default function CalculadoraJS() {
             <button type="button" onClick={() => addValue(0)}>
               0
             </button>
-            <button type="button" onClick={() => addAction(".")}>
+            <button type="button" onClick={() => addAction('.')}>
               .
             </button>
             <button type="button" onClick={() => execute()}>
@@ -96,27 +96,32 @@ export default function CalculadoraJS() {
             <button type="button" onClick={() => reset()}>
               CE
             </button>
-            <button type="button" onClick={() => addAction("/")}>
+            <button type="button" onClick={() => addAction('/')}>
               /
             </button>
-            <button type="button" onClick={() => addAction("*")}>
+            <button type="button" onClick={() => addAction('*')}>
               *
             </button>
-            <button type="button" onClick={() => addAction("-")}>
+            <button type="button" onClick={() => addAction('-')}>
               -
             </button>
-            <button type="button" onClick={() => addAction("+")}>
+            <button type="button" onClick={() => addAction('+')}>
               +
             </button>
           </main>
         </div>
       </div>
       <footer className={styles.footer}>
-        Site desenvolvido usando ReactJS, por{" "}
+        Site desenvolvido usando ReactJS, por
+        {' '}
         <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
           Daniel José Padilha
-        </a>{" "}
-        - © {new Date().getFullYear()}{" "}
+        </a>
+        {' '}
+        - ©
+        {' '}
+        {new Date().getFullYear()}
+        {' '}
       </footer>
     </div>
   );

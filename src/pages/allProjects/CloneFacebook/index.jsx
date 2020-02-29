@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./styles.module.css";
-import UserImage from "../../../assets/cloneFacebook/userImage.jpg";
+import styles from './styles.module.css';
+import UserImage from '../../../assets/cloneFacebook/userImage.jpg';
 
-import gameIcon1 from "../../../assets/cloneFacebook/gameIcon1.png";
-import gameIcon2 from "../../../assets/cloneFacebook/gameIcon2.png";
-import gameIcon3 from "../../../assets/cloneFacebook/gameIcon3.png";
+import gameIcon1 from '../../../assets/cloneFacebook/gameIcon1.png';
+import gameIcon2 from '../../../assets/cloneFacebook/gameIcon2.png';
+import gameIcon3 from '../../../assets/cloneFacebook/gameIcon3.png';
 
-import feedIcon from "../../../assets/cloneFacebook/feedIcon.png";
-import messengerIcon from "../../../assets/cloneFacebook/messengerIcon.png";
-import watchIcon from "../../../assets/cloneFacebook/watchIcon.png";
-import marketPlaceIcon from "../../../assets/cloneFacebook/marketPlaceIcon.png";
-import savedIcon from "../../../assets/cloneFacebook/savedIcon.png";
+import feedIcon from '../../../assets/cloneFacebook/feedIcon.png';
+import messengerIcon from '../../../assets/cloneFacebook/messengerIcon.png';
+import watchIcon from '../../../assets/cloneFacebook/watchIcon.png';
+import marketPlaceIcon from '../../../assets/cloneFacebook/marketPlaceIcon.png';
+import savedIcon from '../../../assets/cloneFacebook/savedIcon.png';
 
-import photoIcon from "../../../assets/cloneFacebook/photoIcon.png";
-import tagIcon from "../../../assets/cloneFacebook/tagIcon.png";
-import feelingIcon from "../../../assets/cloneFacebook/feelingIcon.png";
-import pointIcon from "../../../assets/cloneFacebook/pointIcon.png";
+import photoIcon from '../../../assets/cloneFacebook/photoIcon.png';
+import tagIcon from '../../../assets/cloneFacebook/tagIcon.png';
+import feelingIcon from '../../../assets/cloneFacebook/feelingIcon.png';
+import pointIcon from '../../../assets/cloneFacebook/pointIcon.png';
 
 export default function Facebook() {
   return (
@@ -45,40 +45,40 @@ export default function Facebook() {
               <hr />
             </div>
             <div className={styles.postContent}>
-              <img src={UserImage} alt="Post image" />
+              <img src={UserImage} alt="icon" />
               <textarea placeholder="No que você está pensando, Daniel?" />
             </div>
             <hr />
             <div className={styles.actions}>
               <div className={styles.actionItem}>
-                <img src={photoIcon} alt="" />
+                <img src={photoIcon} alt="icon" />
                 <small>Foto/Video</small>
               </div>
               <div className={styles.actionItem}>
-                <img src={tagIcon} alt="" />
+                <img src={tagIcon} alt="icon" />
                 <small>Marcar amigos</small>
               </div>
 
               <div className={styles.actionItem}>
-                <img src={feelingIcon} alt="" />
+                <img src={feelingIcon} alt="icon" />
                 <small>Sentimento/a...</small>
               </div>
               <div className={styles.actionItem}>
-                <img src={pointIcon} alt="" />
+                <img src={pointIcon} alt="icon" />
               </div>
             </div>
           </div>
 
           <div className={styles.post}>
             <div className={styles.title}>
-              <img src={UserImage} alt="User image" />
+              <img src={UserImage} alt="User" />
               <div className={styles.postInfo}>
                 <strong>Daniel Padilha</strong>
                 <small>Ontem às 15:00</small>
               </div>
             </div>
             <p>Nova foto!</p>
-            <img src={UserImage} alt="Post image" />
+            <img src={UserImage} alt="Post" />
           </div>
         </div>
         <div>
