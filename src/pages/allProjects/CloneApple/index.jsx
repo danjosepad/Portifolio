@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./styles.module.css";
+import styles from './styles.module.css';
 
-import appleLogo from "../../../assets/cloneApple/logoApple.png";
-import storeLogo from "../../../assets/cloneApple/logoStore.png";
-import searchLogo from "../../../assets/cloneApple/searchIcon.png";
-import listIcon from "../../../assets/cloneApple/listIcon.png";
+import appleLogo from '../../../assets/cloneApple/logoApple.png';
+import storeLogo from '../../../assets/cloneApple/logoStore.png';
+import searchLogo from '../../../assets/cloneApple/searchIcon.png';
+import listIcon from '../../../assets/cloneApple/listIcon.png';
 
 export default function CloneApple() {
   return (
@@ -89,13 +89,13 @@ export default function CloneApple() {
           </div>
         </section>
         <section id={styles.appleTV}>
-          {" "}
+          {' '}
           <div className={styles.mediaLinks}>
             <a href="">Assista agora no app Apple TV</a>
           </div>
         </section>
         <section id={styles.Arcade}>
-          {" "}
+          {' '}
           <div className={styles.mediaLinks}>
             <a href="">Saiba Mais</a>
             <a href="">Teste Gratuito*</a>
