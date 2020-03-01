@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 // import "./styles.css";
-import aos from "aos";
-import "aos/dist/aos.css";
+import aos from 'aos';
+import 'aos/dist/aos.css';
 
-import reactLogo from "../../assets/reactLogo.png";
-import nodeLogo from "../../assets/nodeLogo.png";
-import photo from "../../assets/resizedPhoto.png";
+import reactLogo from '../../assets/reactLogo.jpg';
+import nodeLogo from '../../assets/nodeLogo.jpg';
+import photo from '../../assets/resizedPhoto.png';
 
-import styles from "./styles.module.css";
+import styles from './styles.module.css';
 
 export default function Home() {
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function Home() {
           de sistemas, e sou apaixonado por JavaScript!
         </p>
         <p>
-          {" "}
+          {' '}
           Desenvolvi meus primeiros projetos com Javascript no inicio do ano de
           2019 e fiquei fascinado pela praticidade e o quão poderosa ela é.
           Desde então, procurei aprender as melhores formas de utilizá-la, e
@@ -58,7 +58,9 @@ export default function Home() {
             alguns que fiz enquanto me divertia aprendendo com a linguagem!
           </p>
           <p>
-            Para ver mais sobre, <a href="/projetos">Clique aqui</a>
+            Para ver mais sobre,
+            {' '}
+            <a href="/projetos">Clique aqui</a>
           </p>
         </div>
         <h2>Conhecimentos</h2>
@@ -101,11 +103,16 @@ export default function Home() {
         </div>
 
         <footer>
-          Site desenvolvido usando ReactJS, por{" "}
+          Site desenvolvido usando ReactJS, por
+          {' '}
           <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
             Daniel José Padilha
-          </a>{" "}
-          - © {new Date().getFullYear()}{" "}
+          </a>
+          {' '}
+          - ©
+          {' '}
+          {new Date().getFullYear()}
+          {' '}
         </footer>
       </div>
     </div>
