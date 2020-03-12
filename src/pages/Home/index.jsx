@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 
-// import "./styles.css";
 import aos from 'aos';
 import 'aos/dist/aos.css';
 
 import reactLogo from '../../assets/reactLogo.jpg';
 import nodeLogo from '../../assets/nodeLogo.jpg';
 import photo from '../../assets/resizedPhoto.png';
+import { Link } from 'react-router-dom';
 
 import styles from './styles.module.css';
 
@@ -18,11 +18,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <a href="/" className={styles.active}>
-          INICIO
-        </a>
-        <a href="/curriculo">CURRICULO</a>
-        <a href="/projetos">PROJETOS</a>
+        <Link to="/" className={styles.active}>INICIO</Link>
+        <Link to="/curriculo">CURRICULO</Link>
+        <Link to="/projetos">PROJETOS</Link>
       </div>
 
       <div className={styles.about}>
@@ -60,7 +58,7 @@ export default function Home() {
           <p>
             Para ver mais sobre,
             {' '}
-            <a href="/projetos">Clique aqui</a>
+            <Link to="/projetos">Clique aqui</Link>
           </p>
         </div>
         <h2>Conhecimentos</h2>

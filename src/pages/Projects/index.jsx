@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 // import "./styles.css";
 import aos from 'aos';
+import { Link } from 'react-router-dom';
 import calculadoraGif from '../../assets/giphy.gif';
 
 import appScreensPeerClass from '../../assets/appScreensPeerClass.png';
@@ -61,11 +62,9 @@ export default function Projetos() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <a href="/">INICIO</a>
-        <a href="/curriculo">CURRICULO</a>
-        <a href="/projetos" className={styles.active}>
-          PROJETOS
-        </a>
+        <Link to="/">INICIO</Link>
+        <Link to="/curriculo">CURRICULO</Link>
+        <Link to="/projetos" className={styles.active}>PROJETOS</Link>
       </div>
 
       <div className={styles.projectsContainer}>
@@ -135,7 +134,7 @@ export default function Projetos() {
               >
                 <img src={appScreenAppleClone} alt="Clone Apple" />
                 <h2>
-                  <a href="/projetos/apple">Apple</a>
+                  <Link to="/projetos/apple">Apple</Link>
                 </h2>
                 <p>Clone da página Inicial da Apple</p>
               </div>
@@ -146,7 +145,7 @@ export default function Projetos() {
               >
                 <img src={appScreenAnotacoes} alt="Foto AnotacoesJS" />
                 <h2>
-                  <a href="projetos/anotacoesJS">AnotacoesJS</a>
+                  <Link to="/projetos/anotacoesJS">AnotacoesJS</Link>
                 </h2>
                 <p>
                   Sistema de gerenciamento de anotações baseado no iCloud Mail
@@ -159,7 +158,7 @@ export default function Projetos() {
               >
                 <img src={calculadoraGif} alt="gif calculadora" />
                 <h2>
-                  <a href="projetos/calculadoraJS">CalculadoraJS</a>
+                  <Link to="/projetos/calculadoraJS">CalculadoraJS</Link>
                 </h2>
                 <p>Criação de uma calculadora visual com o uso do ReactJS!</p>
                 <small>
@@ -177,7 +176,7 @@ export default function Projetos() {
               >
                 <img src={appScreenTodoList} alt="Foto Todo-List" />
                 <h2>
-                  <a href="projetos/todo-list">Todo List</a>
+                  <Link to="/projetos/todo-list">Todo List</Link>
                 </h2>
                 <p>
                   Crie e gerencie suas tarefas usando esse Todo-List em ReactJS

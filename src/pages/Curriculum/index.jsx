@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import aos from 'aos';
+import { Link } from 'react-router-dom';
 import styles from './styles.module.css';
 import photo from '../../assets/resizedPhoto.png';
 
@@ -10,7 +11,6 @@ import rocketseatLogo from '../../assets/rocketseatLogo.jpg';
 import udemyLogo from '../../assets/udemyLogo.jpg';
 import fundacaoBradescoLogo from '../../assets/fundacaoBradescoLogo.jpg';
 import interasoftLogo from '../../assets/interasoftLogo.png';
-
 import 'aos/dist/aos.css';
 
 export default function Curriculo() {
@@ -20,11 +20,9 @@ export default function Curriculo() {
   return (
     <>
       <div className={styles.header}>
-        <a href="/">INICIO</a>
-        <a href="/curriculo" className={styles.active}>
-          CURRICULO
-        </a>
-        <a href="/projetos">PROJETOS</a>
+        <Link to="/">INICIO</Link>
+        <Link to="/curriculo" className={styles.active}>CURRICULO</Link>
+        <Link to="/projetos">PROJETOS</Link>
       </div>
 
       <div className={styles.container}>
