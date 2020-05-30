@@ -102,6 +102,7 @@ a {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 .headerProjects button:hover {
   width: 110px;

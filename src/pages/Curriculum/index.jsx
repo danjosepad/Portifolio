@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 import aos from 'aos';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import styles from './styles.module.css';
 import photo from '../../assets/resizedPhoto.png';
 
@@ -19,6 +20,9 @@ export default function Curriculo() {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Daniel Padilha - Curriculo</title>
+      </Helmet>
       <div className={styles.header}>
         <Link to="/">INICIO</Link>
         <Link to="/curriculo" className={styles.active}>CURRICULO</Link>

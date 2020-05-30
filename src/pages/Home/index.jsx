@@ -3,11 +3,11 @@ import React, { useEffect } from 'react';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import reactLogo from '../../assets/reactLogo.jpg';
 import nodeLogo from '../../assets/nodeLogo.jpg';
 import photo from '../../assets/resizedPhoto.png';
-import { Link } from 'react-router-dom';
-
 import styles from './styles.module.css';
 
 export default function Home() {
@@ -17,6 +17,9 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>Daniel Padilha - Inicio</title>
+      </Helmet>
       <div className={styles.header}>
         <Link to="/" className={styles.active}>INICIO</Link>
         <Link to="/curriculo">CURRICULO</Link>

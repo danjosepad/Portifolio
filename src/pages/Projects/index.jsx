@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 // import "./styles.css";
 import aos from 'aos';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import calculadoraGif from '../../assets/giphy.gif';
 
 import appScreensPeerClass from '../../assets/appScreensPeerClass.png';
@@ -61,6 +62,9 @@ export default function Projetos() {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>Daniel Padilha - Projetos</title>
+      </Helmet>
       <div className={styles.header}>
         <Link to="/">INICIO</Link>
         <Link to="/curriculo">CURRICULO</Link>
