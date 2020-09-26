@@ -13,10 +13,8 @@ module.exports = {
   },
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: false,
     },
-    ecmaVersion: 2018,
-    sourceType: 'module',
   },
   plugins: [
     'react',
