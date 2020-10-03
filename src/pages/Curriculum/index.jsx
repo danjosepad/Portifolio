@@ -1,23 +1,29 @@
 import React, { useEffect } from 'react';
-
+import 'aos/dist/aos.css';
 import aos from 'aos';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import styles from './styles.module.css';
-import photo from '../../assets/resizedPhoto.png';
+
+
+// Project imports
 
 import yamanLogo from '../../assets/yamanLogo.png';
+import caminoLogo from '../../assets/CaminoLogo.png';
 import fatecOurinhosLogo from '../../assets/fatecOurinhosLogo.jpg';
 import rocketseatLogo from '../../assets/rocketseatLogo.jpg';
 import udemyLogo from '../../assets/udemyLogo.jpg';
 import fundacaoBradescoLogo from '../../assets/fundacaoBradescoLogo.jpg';
 import interasoftLogo from '../../assets/interasoftLogo.png';
-import 'aos/dist/aos.css';
+import styles from './styles.module.css';
+import photo from '../../assets/resizedPhoto.png';
+import Footer from '../../components/Footer';
 
 export default function Curriculo() {
+
   useEffect(() => {
     aos.init({ once: true });
   }, []);
+
   return (
     <>
       <Helmet>
@@ -51,6 +57,16 @@ export default function Curriculo() {
         </div>
         <div className={styles.workExps}>
           <h2>Experiências</h2>
+
+          <div className={styles.company}>
+            <img src={caminoLogo} alt="Camino Education" />
+            <div className={styles.details}>
+              <strong>Desenvolvedor Front-End</strong>
+              <p>Camino Education</p>
+              <small>Atual, São Paulo - SP</small>
+            </div>
+          </div>
+
           <div className={styles.company}>
             <img src={yamanLogo} alt="Yaman" />
             <div className={styles.details}>
@@ -59,6 +75,7 @@ export default function Curriculo() {
               <small>3 meses, São Paulo - SP</small>
             </div>
           </div>
+
 
           <div className={styles.company}>
             <img src={fatecOurinhosLogo} alt="Fatec Ourinhos" />
@@ -92,7 +109,8 @@ export default function Curriculo() {
           <h2>Conhecimentos</h2>
           <p>JavaScript</p>
           <p>NodeJS</p>
-          <p>React</p>
+          <p>ReactJS</p>
+          <p>Programação Funcional</p>
           <p>React Native</p>
           <p>Regex</p>
           <p>Testes Automatizados</p>
@@ -227,18 +245,7 @@ export default function Curriculo() {
           </div>
         </div>
       </div>
-      <footer>
-        Site desenvolvido usando ReactJS, por
-        {' '}
-        <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
-          Daniel José Padilha
-        </a>
-        {' '}
-        - ©
-        {' '}
-        {new Date().getFullYear()}
-        {' '}
-      </footer>
+      <Footer />
     </>
   );
 }

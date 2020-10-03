@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 import styles from './styles.module.css';
+import Footer from '../../../components/Footer';
+
 /* eslint no-eval: 0 */
 export default function CalculadoraJS() {
   const [value, setValue] = useState('');
@@ -111,18 +113,7 @@ export default function CalculadoraJS() {
           </main>
         </div>
       </div>
-      <footer className={styles.footer}>
-        Site desenvolvido usando ReactJS, por
-        {' '}
-        <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
-          Daniel José Padilha
-        </a>
-        {' '}
-        - ©
-        {' '}
-        {new Date().getFullYear()}
-        {' '}
-      </footer>
+      <Footer />
     </div>
   );
 }

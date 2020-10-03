@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import reactLogo from '../../assets/reactLogo.jpg';
 import nodeLogo from '../../assets/nodeLogo.jpg';
 import photo from '../../assets/resizedPhoto.png';
 import styles from './styles.module.css';
+import Footer from '../../components/Footer';
 
 export default function Home() {
   useEffect(() => {
@@ -77,7 +77,6 @@ export default function Home() {
             <small>ExpressJS</small>
             <small>AdonisJS</small>
             <small>Conhecimentos em BD (MySQL, Postgres, mongoDB)</small>
-            <small>Testes</small>
           </div>
           <div
             className={styles.knowlodgesContainer}
@@ -88,7 +87,7 @@ export default function Home() {
             <h3>React</h3>
             <small>React Hooks</small>
             <small>Redux</small>
-            <small>Testes</small>
+            <small>Testes com Cypress e Jest</small>
           </div>
           <div
             className={styles.knowlodgesContainer}
@@ -99,22 +98,10 @@ export default function Home() {
             <h3>React Native</h3>
             <small>React Hooks</small>
             <small>Redux</small>
-            <small>Testes</small>
           </div>
         </div>
 
-        <footer>
-          Site desenvolvido usando ReactJS, por
-          {' '}
-          <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
-            Daniel José Padilha
-          </a>
-          {' '}
-          - ©
-          {' '}
-          {new Date().getFullYear()}
-          {' '}
-        </footer>
+        <Footer />
       </div>
     </div>
   );
