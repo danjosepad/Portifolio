@@ -9,6 +9,15 @@ import nodeLogo from '../../assets/nodeLogo.jpg';
 import photo from '../../assets/resizedPhoto.png';
 import styles from './styles.module.css';
 import Footer from '../../components/Footer';
+import {
+  Container,
+  Header,
+  About,
+  LinkRef,
+  MediaLinks,
+  Knowlodges,
+  KnowlodgesContainer
+} from './styles';
 
 export default function Home() {
   useEffect(() => {
@@ -16,27 +25,27 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <Container>
       <Helmet>
         <title>Daniel Padilha - Inicio</title>
       </Helmet>
-      <div className={styles.header}>
-        <Link to="/" className={styles.active}>INICIO</Link>
-        <Link to="/curriculo">CURRICULO</Link>
-        <Link to="/projetos">PROJETOS</Link>
-      </div>
+      <Header>
+        <LinkRef to="/" isActive>INICIO</LinkRef>
+        <LinkRef to="/curriculo">CURRICULO</LinkRef>
+        <LinkRef to="/projetos">PROJETOS</LinkRef>
+      </Header>
 
-      <div className={styles.about}>
+      <About>
         <img src={photo} alt="Daniel Padilha" className={styles.photo} />
         <strong>Daniel José Padilha</strong>
         <small>Análise e Desenvolvimento de Sistemas</small>
         <small>Javascript Developer</small>
-        <div className={styles.mediaLinks}>
+        <MediaLinks>
           <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
             linkedIn
           </a>
           <a href="https://github.com/danjosepad?tab=repositories">GitHub</a>
-        </div>
+        </MediaLinks>
 
         <h2>Olá!</h2>
         <p>
@@ -52,7 +61,7 @@ export default function Home() {
           utilizo em meus projetos.
         </p>
 
-        <div className={styles.projects}>
+        <div>
           <h2>Projetos</h2>
           <p>
             Pude participar de projetos muito interessantes, e apresentarei
@@ -66,9 +75,8 @@ export default function Home() {
         </div>
         <h2>Conhecimentos</h2>
 
-        <div className={styles.knowlodges}>
-          <div
-            className={styles.knowlodgesContainer}
+        <Knowlodges>
+          <KnowlodgesContainer
             data-aos="fade-up"
             data-aos-duration="1000"
           >
@@ -77,9 +85,8 @@ export default function Home() {
             <small>ExpressJS</small>
             <small>AdonisJS</small>
             <small>Conhecimentos em BD (MySQL, Postgres, mongoDB)</small>
-          </div>
-          <div
-            className={styles.knowlodgesContainer}
+          </KnowlodgesContainer>
+          <KnowlodgesContainer
             data-aos="fade-up"
             data-aos-duration="1250"
           >
@@ -88,9 +95,8 @@ export default function Home() {
             <small>React Hooks</small>
             <small>Redux</small>
             <small>Testes com Cypress e Jest</small>
-          </div>
-          <div
-            className={styles.knowlodgesContainer}
+          </KnowlodgesContainer>
+          <KnowlodgesContainer
             data-aos="fade-up"
             data-aos-duration="1500"
           >
@@ -98,11 +104,10 @@ export default function Home() {
             <h3>React Native</h3>
             <small>React Hooks</small>
             <small>Redux</small>
-          </div>
-        </div>
-
+          </KnowlodgesContainer>
+        </Knowlodges>
         <Footer />
-      </div>
-    </div>
+      </About>
+    </Container>
   );
 }

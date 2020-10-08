@@ -1,7 +1,8 @@
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 function fadeIn() {
-    return keyframes`
+  return keyframes`
       from {
         opacity: 0;
       }
@@ -9,7 +10,7 @@ function fadeIn() {
         opacity: 1;
       }
   `;
-};
+}
 
 export const Container = styled.div`
   max-width: 800px;
@@ -19,6 +20,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const LinkRef = styled(Link)`
+  ${({ isActive }) => isActive && `
+    color: #ae9878;
+    border-bottom: 2px solid #c4b094;
+    padding-bottom: 4px;
+    transition: all 0.1s;
+    `}
 `;
 
 export const Header = styled.div`
@@ -40,15 +50,11 @@ export const Header = styled.div`
 
   a:hover {
   color: #ae9878;
-  transition: all 0.1s;
-  }
-
-  ${ ({ isActive }) => isActive && ``};
-
-  color: #ae9878;
   border-bottom: 2px solid #c4b094;
   padding-bottom: 4px;
   transition: all 0.1s;
+  transition: all 0.1s;
+  }
 `;
 
 export const About = styled.div`
@@ -127,4 +133,12 @@ export const Knowlodges = styled.div`
     font-weight: 300;
     color: #59504d;
   }
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
+export const KnowlodgesContainer = styled.div`
+  text-align: center;
 `;
