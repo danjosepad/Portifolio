@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 // import "./styles.css";
 import aos from 'aos';
@@ -23,113 +23,73 @@ import styles from './styles.module.css';
 import 'aos/dist/aos.css';
 
 export default function Projetos() {
-  const [backend, setBackend] = useState(true);
-  const [web, setWeb] = useState(false);
-  const [mobile, setMobile] = useState(false);
-  const [fullstack, setFullstack] = useState(false);
+  const [stackType, setStackType] = useState('');
 
   useEffect(() => {
     aos.init();
   }, []);
 
   const showBackend = () => {
-    setBackend(true);
-    setWeb(false);
-    setMobile(false);
-    setFullstack(false);
+    setStackType('backend');
   };
 
   const showWeb = () => {
-    setBackend(false);
-    setWeb(true);
-    setMobile(false);
-    setFullstack(false);
+    setStackType('web');
   };
 
   const showMobile = () => {
-    setBackend(false);
-    setWeb(false);
-    setMobile(true);
-    setFullstack(false);
+    setStackType('mobile');
   };
 
   const showFullstack = () => {
-    setBackend(false);
-    setWeb(false);
-    setMobile(false);
-    setFullstack(true);
+    setStackType('fullstack');
   };
 
-  return (
-    <div className={styles.container}>
-      <Helmet>
-        <title>Daniel Padilha - Projetos</title>
-      </Helmet>
-      <div className={styles.header}>
-        <Link to="/">INICIO</Link>
-        <Link to="/curriculo">CURRICULO</Link>
-        <Link to="/projetos" className={styles.active}>PROJETOS</Link>
-      </div>
+  const renderBasedOnStackType = useMemo(() => {
+    switch(stackType) {
+      case 'backend':
+        return (
+          <>
+            <div
+              className={styles.projectsContent}
+              data-aos="fade-up"
+              data-aos-duration="500"
+            >
+              <img
+                src={logoConceitosNodeJS}
+                alt="API Conceitos NodeJS"
+                className={styles.logoApi}
+              />
+              <h2>
+                <a href="https://github.com/danjosepad/API-Conceitos-NodeJS">
+                  API de Conceitos do NodeJS
+                </a>
+              </h2>
+              <p>Explorando os conceitos do NodeJS utilizando Express</p>
+            </div>
 
-      <div className={styles.projectsContainer}>
-        <h1>Projetos</h1>
-        <div className={styles.headerProjects}>
-          <button type="button" onClick={() => showBackend()}>
-            Backend
-          </button>
-          <button type="button" onClick={() => showWeb()}>
-            Web
-          </button>
-          <button type="button" onClick={() => showMobile()}>
-            Mobile
-          </button>
-          <button type="button" onClick={() => showFullstack()}>
-            Fullstack
-          </button>
-        </div>
-        <div className={styles.projects}>
-          {backend && (
-            <>
-              <div
-                className={styles.projectsContent}
-                data-aos="fade-up"
-                data-aos-duration="500"
-              >
-                <img
-                  src={logoConceitosNodeJS}
-                  alt="API Conceitos NodeJS"
-                  className={styles.logoApi}
-                />
-                <h2>
-                  <a href="https://github.com/danjosepad/API-Conceitos-NodeJS">
-                    API de Conceitos do NodeJS
-                  </a>
-                </h2>
-                <p>Explorando os conceitos do NodeJS utilizando Express</p>
-              </div>
-
-              <div
-                className={styles.projectsContent}
-                data-aos="fade-up"
-                data-aos-duration="500"
-              >
-                <img
-                  src={logoGoBarber}
-                  alt="GoBarber"
-                  className={styles.logoApi}
-                />
-                <h2>
-                  {' '}
-                  <a href="https://github.com/danjosepad/GoBarber-Node">
-                    GoBarber NodeJS
-                  </a>
-                </h2>
-                <p>Criando uma API para sistema de barbearia em NodeJS</p>
-              </div>
-            </>
-          )}
-
-          {web && (
+            <div
+              className={styles.projectsContent}
+              data-aos="fade-up"
+              data-aos-duration="500"
+            >
+              <img
+                src={logoGoBarber}
+                alt="GoBarber"
+                className={styles.logoApi}
+              />
+              <h2>
+                {' '}
+                <a href="https://github.com/danjosepad/GoBarber-Node">
+                  GoBarber NodeJS
+                </a>
+              </h2>
+              <p>Criando uma API para sistema de barbearia em NodeJS</p>
+            </div>
+          </>
+        )
+        case 'web':
+          return (
             <>
               <div
                 className={styles.projectsContent}
@@ -194,9 +154,9 @@ export default function Projetos() {
                 </small>
               </div>
             </>
-          )}
-
-          {mobile && (
+          )
+        case 'mobile':
+          return (
             <>
               <div
                 className={styles.projectsContent}
@@ -206,81 +166,117 @@ export default function Projetos() {
                 <p>Projetos mobile serão publicados em breve!</p>
               </div>
             </>
-          )}
+          )
+        case 'fullstack':
+            return (
+              <>
+                <div
+                  className={styles.projectsContent}
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                >
+                  <img src={appScreensPeerClass} alt="PeerClass" />
+                  <h2>
+                    <a href="https://github.com/danjosepad/PeerClass">
+                      PeerClass
+                    </a>
+                  </h2>
+                  <p>Sistema de avaliação por pares e rubricas</p>
+                </div>
 
-          {fullstack && (
-            <>
-              <div
-                className={styles.projectsContent}
-                data-aos="fade-up"
-                data-aos-duration="500"
-              >
-                <img src={appScreensPeerClass} alt="PeerClass" />
-                <h2>
-                  <a href="https://github.com/danjosepad/PeerClass">
-                    PeerClass
-                  </a>
-                </h2>
-                <p>Sistema de avaliação por pares e rubricas</p>
-              </div>
+                <div
+                  className={styles.projectsContent}
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                >
+                  <img src={appScreensAircnc} alt="AirCnc" />
+                  <h2>
+                    <a href="https://github.com/danjosepad/semana-omnistack-9">
+                      AirCnC
+                    </a>
+                  </h2>
+                  <p>Clone do Airbnb</p>
+                </div>
 
-              <div
-                className={styles.projectsContent}
-                data-aos="fade-up"
-                data-aos-duration="500"
-              >
-                <img src={appScreensAircnc} alt="AirCnc" />
-                <h2>
-                  <a href="https://github.com/danjosepad/semana-omnistack-9">
-                    AirCnC
-                  </a>
-                </h2>
-                <p>Clone do Airbnb</p>
-              </div>
+                <div
+                  className={styles.projectsContent}
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                >
+                  <img src={appScreensDevRadar} alt="DevRadar" />
+                  <h2>
+                    <a href="https://github.com/danjosepad/semana-omnistack-10">
+                      DevRadar
+                    </a>
+                  </h2>
+                  <p>Busque desenvolvedores em sua região</p>
+                </div>
+                <div
+                  className={styles.projectsContent}
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                >
+                  <img src={appScreensInstaRocket} alt="InstaRocket" />
+                  <h2>
+                    <a href="https://github.com/danjosepad/semana-omnistack-7">
+                      Instarocket
+                    </a>
+                  </h2>
+                  <p>Clone do Instagram</p>
+                </div>
 
-              <div
-                className={styles.projectsContent}
-                data-aos="fade-up"
-                data-aos-duration="500"
-              >
-                <img src={appScreensDevRadar} alt="DevRadar" />
-                <h2>
-                  <a href="https://github.com/danjosepad/semana-omnistack-10">
-                    DevRadar
-                  </a>
-                </h2>
-                <p>Busque desenvolvedores em sua região</p>
-              </div>
-              <div
-                className={styles.projectsContent}
-                data-aos="fade-up"
-                data-aos-duration="500"
-              >
-                <img src={appScreensInstaRocket} alt="InstaRocket" />
-                <h2>
-                  <a href="https://github.com/danjosepad/semana-omnistack-7">
-                    Instarocket
-                  </a>
-                </h2>
-                <p>Clone do Instagram</p>
-              </div>
+                <div
+                  className={styles.projectsContent}
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                >
+                  <img src={appScreensTindev} alt="Tindev" />
+                  <h2>
+                    {' '}
+                    <a href="https://github.com/danjosepad/semana-omnistack-8">
+                      TinDev
+                    </a>
+                  </h2>
+                  <p>Clone do Tinder</p>
+                </div>
+              </>
+            )
+        default:
+          break;
+      }
 
-              <div
-                className={styles.projectsContent}
-                data-aos="fade-up"
-                data-aos-duration="500"
-              >
-                <img src={appScreensTindev} alt="Tindev" />
-                <h2>
-                  {' '}
-                  <a href="https://github.com/danjosepad/semana-omnistack-8">
-                    TinDev
-                  </a>
-                </h2>
-                <p>Clone do Tinder</p>
-              </div>
-            </>
-          )}
+    }, [stackType])
+
+
+  return (
+    <div className={styles.container}>
+      <Helmet>
+        <title>Daniel Padilha - Projetos</title>
+      </Helmet>
+      <div className={styles.header}>
+        <Link to="/">INICIO</Link>
+        <Link to="/curriculo">CURRICULO</Link>
+        <Link to="/projetos" className={styles.active}>PROJETOS</Link>
+      </div>
+
+      <div className={styles.projectsContainer}>
+        <h1>Projetos</h1>
+        <div className={styles.headerProjects}>
+          <button type="button" onClick={() => showBackend()}>
+            Backend
+          </button>
+          <button type="button" onClick={() => showWeb()}>
+            Web
+          </button>
+          <button type="button" onClick={() => showMobile()}>
+            Mobile
+          </button>
+          <button type="button" onClick={() => showFullstack()}>
+            Fullstack
+          </button>
+        </div>
+        <div className={styles.projects}>
+          {renderBasedOnStackType}
         </div>
       </div>
       <footer>
