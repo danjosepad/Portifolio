@@ -23,7 +23,7 @@ import styles from './styles.module.css';
 import 'aos/dist/aos.css';
 
 export default function Projetos() {
-  const [stackType, setStackType] = useState('');
+  const [stackType, setStackType] = useState('backend');
 
   useEffect(() => {
     aos.init();
