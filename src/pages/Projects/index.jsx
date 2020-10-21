@@ -14,6 +14,7 @@ import appScreenAppleClone from '../../assets/appScreenAppleClone.png';
 import appScreenAnotacoes from '../../assets/appScreenAnotacoes.png';
 import appScreenTodoList from '../../assets/appScreenTodoList.png';
 import appScreensInstaRocket from '../../assets/appScreensInstaRocket.png';
+import appScreensGithubVisualizer from '../../assets/appScreensGithubVisualizer.jpg';
 
 import logoConceitosNodeJS from '../../assets/logoConceitosNodeJS.png';
 import logoGoBarber from '../../assets/logoGoBarber.png';
@@ -152,6 +153,17 @@ export default function Projetos() {
                     clique aqui
                   </a>
                 </small>
+              </div>
+              <div
+                className={styles.projectsContent}
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img src={appScreensGithubVisualizer} alt="Github Visualizer" />
+                <h2>
+                  <a href="https://github.com/danjosepad/github-visualizer/">Github Visualizer</a>
+                </h2>
+                <p>Gerenciamento de organizações e repositórios do Github</p>
               </div>
             </>
           )
