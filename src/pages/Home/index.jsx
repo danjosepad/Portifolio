@@ -56,9 +56,8 @@ export default function Home() {
           {' '}
           Desenvolvi meus primeiros projetos com Javascript no inicio do ano de
           2019 e fiquei fascinado pela praticidade e o quão poderosa ela é.
-          Desde então, procurei aprender as melhores formas de utilizá-la, e
-          pude encontrar a Stack React, React Native e NodeJS, da qual sempre
-          utilizo em meus projetos.
+          Desde então, procurei aprender as melhores formas de utilizá-la, como
+          ReactJS, React Native, NodeJS, entre outros.
         </p>
 
         <div>
@@ -92,6 +91,7 @@ export default function Home() {
           >
             <img src={reactLogo} alt="ReactJS" />
             <h3>React</h3>
+            <small>Conhecimentos avançados na biblioteca</small>
             <small>React Hooks</small>
             <small>Redux</small>
             <small>Testes com Cypress e Jest</small>

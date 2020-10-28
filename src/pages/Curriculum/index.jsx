@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet';
 
 import yamanLogo from '../../assets/yamanLogo.png';
 import caminoLogo from '../../assets/CaminoLogo.png';
+import sciensaLogo from '../../assets/sciensaLogo.jpeg';
 import fatecOurinhosLogo from '../../assets/fatecOurinhosLogo.jpg';
 import rocketseatLogo from '../../assets/rocketseatLogo.jpg';
 import udemyLogo from '../../assets/udemyLogo.jpg';
@@ -59,11 +60,20 @@ export default function Curriculo() {
           <h2>Experiências</h2>
 
           <div className={styles.company}>
-            <img src={caminoLogo} alt="Camino Education" />
+            <img src={sciensaLogo} alt="Sciensa" />
             <div className={styles.details}>
               <strong>Desenvolvedor Front-End</strong>
-              <p>Camino Education</p>
+              <p>Sciensa</p>
               <small>Atual, São Paulo - SP</small>
+            </div>
+          </div>
+
+          <div className={styles.company}>
+            <img src={caminoLogo} alt="Camino Education" />
+            <div className={styles.details}>
+              <strong>Desenvolvedor Front-End Jr</strong>
+              <p>Camino Education</p>
+              <small>8 meses, São Paulo - SP</small>
             </div>
           </div>
 
@@ -82,10 +92,11 @@ export default function Curriculo() {
             <div className={styles.details}>
               <strong>Estagio Fullstack NodeJS, React e React Native</strong>
               <p>FATEC Faculdade de Tecnologia de Ourinhos</p>
-              <small>5 meses, Ourinhos - SP</small>
+              <small>11 meses, Ourinhos - SP</small>
             </div>
           </div>
         </div>
+
         <div className={styles.education}>
           <h2>Formação Academica</h2>
           <div className={styles.institution}>
