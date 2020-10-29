@@ -20,7 +20,7 @@ import logoConceitosNodeJS from '../../assets/logoConceitosNodeJS.png';
 import logoGoBarber from '../../assets/logoGoBarber.png';
 
 import styles from './styles.module.css';
-
+import Header from '../../components/Header';
 import 'aos/dist/aos.css';
 
 export default function Projetos() {
@@ -265,11 +265,7 @@ export default function Projetos() {
       <Helmet>
         <title>Daniel Padilha - Projetos</title>
       </Helmet>
-      <div className={styles.header}>
-        <Link to="/">INICIO</Link>
-        <Link to="/curriculo">CURRICULO</Link>
-        <Link to="/projetos" className={styles.active}>PROJETOS</Link>
-      </div>
+      <Header type="projects" />
 
       <div className={styles.projectsContainer}>
         <h1>Projetos</h1>

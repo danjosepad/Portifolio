@@ -11,13 +11,12 @@ import styles from './styles.module.css';
 import Footer from '../../components/Footer';
 import {
   Container,
-  Header,
   About,
-  LinkRef,
   MediaLinks,
   Knowlodges,
   KnowlodgesContainer
 } from './styles';
+import Header from '../../components/Header';
 
 export default function Home() {
   useEffect(() => {
@@ -29,12 +28,7 @@ export default function Home() {
       <Helmet>
         <title>Daniel Padilha - Inicio</title>
       </Helmet>
-      <Header>
-        <LinkRef to="/" isActive>INICIO</LinkRef>
-        <LinkRef to="/curriculo">CURRICULO</LinkRef>
-        <LinkRef to="/projetos">PROJETOS</LinkRef>
-      </Header>
-
+      <Header type="home" />
       <About>
         <img src={photo} alt="Daniel Padilha" className={styles.photo} />
         <strong>Daniel José Padilha</strong>

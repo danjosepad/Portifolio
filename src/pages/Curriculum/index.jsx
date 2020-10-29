@@ -18,6 +18,8 @@ import interasoftLogo from '../../assets/interasoftLogo.png';
 import styles from './styles.module.css';
 import photo from '../../assets/resizedPhoto.png';
 import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import { HeaderContainer } from './styles';
 
 export default function Curriculo() {
 
@@ -30,12 +32,10 @@ export default function Curriculo() {
       <Helmet>
         <title>Daniel Padilha - Curriculo</title>
       </Helmet>
-      <div className={styles.header}>
-        <Link to="/">INICIO</Link>
-        <Link to="/curriculo" className={styles.active}>CURRICULO</Link>
-        <Link to="/projetos">PROJETOS</Link>
-      </div>
 
+      <HeaderContainer>
+        <Header type="curriculum" />
+      </HeaderContainer>
       <div className={styles.container}>
         <div className={styles.userInfo}>
           <h2>Informações pessoais</h2>
