@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import { Link } from 'react-router-dom';
 
 function fadeIn() {
   return keyframes`
@@ -20,41 +19,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-export const LinkRef = styled(Link)`
-  ${({ isActive }) => isActive && `
-    color: #ae9878;
-    border-bottom: 2px solid #c4b094;
-    padding-bottom: 4px;
-    transition: all 0.1s;
-    `}
-`;
-
-export const Header = styled.div`
- min-height: 50px;
-  height: 20%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-
-  a {
-  color: #c4b094;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 600;
-  }
-
-  a:hover {
-  color: #ae9878;
-  border-bottom: 2px solid #c4b094;
-  padding-bottom: 4px;
-  transition: all 0.1s;
-  transition: all 0.1s;
-  }
 `;
 
 export const About = styled.div`
