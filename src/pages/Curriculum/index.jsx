@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import aos from 'aos';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-
 
 // Project imports
 
@@ -44,10 +42,10 @@ export default function Curriculo() {
           <small>Telefone de contato: (14) 99723-6649</small>
 
           <div className={styles.mediaLinks}>
-            <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
+            <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/" target="_blank" rel="noopener noreferrer">
               linkedIn
             </a>
-            <a href="https://github.com/danjosepad?tab=repositories">GitHub</a>
+            <a href="https://github.com/danjosepad?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
         <div className={styles.photo}>
@@ -62,7 +60,7 @@ export default function Curriculo() {
           <div className={styles.company}>
             <img src={sciensaLogo} alt="Sciensa" />
             <div className={styles.details}>
-              <strong>Desenvolvedor Front-End</strong>
+              <strong>Desenvolvedor Front-End Pl</strong>
               <p>Sciensa</p>
               <small>Atual, São Paulo - SP</small>
             </div>

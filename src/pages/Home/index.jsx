@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 
-import reactLogo from '../../assets/reactLogo.jpg';
-import nodeLogo from '../../assets/nodeLogo.jpg';
 import photo from '../../assets/resizedPhoto.png';
 import styles from './styles.module.css';
 import Footer from '../../components/Footer';
@@ -13,8 +11,6 @@ import {
   Container,
   About,
   MediaLinks,
-  Knowlodges,
-  KnowlodgesContainer
 } from './styles';
 import Header from '../../components/Header';
 
@@ -35,10 +31,10 @@ export default function Home() {
         <small>Análise e Desenvolvimento de Sistemas</small>
         <small>Javascript Developer</small>
         <MediaLinks>
-          <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/">
+          <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/" target="_blank" rel="noopener noreferrer">
             linkedIn
           </a>
-          <a href="https://github.com/danjosepad?tab=repositories">GitHub</a>
+          <a href="https://github.com/danjosepad?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
         </MediaLinks>
 
         <h2>Olá!</h2>
@@ -48,10 +44,8 @@ export default function Home() {
         </p>
         <p>
           {' '}
-          Desenvolvi meus primeiros projetos com Javascript no inicio do ano de
-          2019 e fiquei fascinado pela praticidade e o quão poderosa ela é.
-          Desde então, procurei aprender as melhores formas de utilizá-la, como
-          ReactJS, React Native, NodeJS, entre outros.
+          Desenvolvo templates desde meus 12 anos, e sempre fiquei abismado com 
+          o poder das tecnologias e suas utilidades. Entregar soluções de qualidade é o que me motiva!
         </p>
 
         <div>
@@ -66,40 +60,7 @@ export default function Home() {
             <Link to="/projetos">Clique aqui</Link>
           </p>
         </div>
-        <h2>Conhecimentos</h2>
-
-        <Knowlodges>
-          <KnowlodgesContainer
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            <img src={nodeLogo} alt="NodeJS" />
-            <h3>NodeJS</h3>
-            <small>ExpressJS</small>
-            <small>AdonisJS</small>
-            <small>Conhecimentos em BD (MySQL, Postgres, mongoDB)</small>
-          </KnowlodgesContainer>
-          <KnowlodgesContainer
-            data-aos="fade-up"
-            data-aos-duration="1250"
-          >
-            <img src={reactLogo} alt="ReactJS" />
-            <h3>React</h3>
-            <small>Conhecimentos avançados na biblioteca</small>
-            <small>React Hooks</small>
-            <small>Redux</small>
-            <small>Testes com Cypress e Jest</small>
-          </KnowlodgesContainer>
-          <KnowlodgesContainer
-            data-aos="fade-up"
-            data-aos-duration="1500"
-          >
-            <img src={reactLogo} alt="React Native" />
-            <h3>React Native</h3>
-            <small>React Hooks</small>
-            <small>Redux</small>
-          </KnowlodgesContainer>
-        </Knowlodges>
+      
         <Footer />
       </About>
     </Container>
