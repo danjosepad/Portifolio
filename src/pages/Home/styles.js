@@ -14,7 +14,7 @@ function fadeIn() {
 export const Container = styled.div`
   max-width: 800px;
   margin: 0 auto;
-  padding: 60px 30px;
+  padding: 32px 24px;
 
   display: flex;
   flex-direction: column;
