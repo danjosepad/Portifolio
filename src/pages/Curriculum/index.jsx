@@ -39,7 +39,7 @@ export default function Curriculo() {
           <h2>Informações pessoais</h2>
           <strong>Daniel José Padilha</strong>
           <span>E-mail: danielpadilhapessoal@outlook.com</span>
-          <small>Telefone de contato: (14) 99723-6649</small>
+          <small>Telefone de contato: (14) 99746-9042</small>
 
           <div className={styles.mediaLinks}>
             <a href="https://www.linkedin.com/in/daniel-padilha-6926b8173/" target="_blank" rel="noopener noreferrer">
