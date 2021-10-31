@@ -11,6 +11,7 @@ import TodoList from "./pages/allProjects/TodoList/index";
 import CalculadoraJS from "./pages/allProjects/CalculadoraJS/index";
 import CloneApple from "./pages/allProjects/CloneApple/index";
 import Facebook from "./pages/allProjects/CloneFacebook/index";
+import PxToRem from "./pages/allProjects/PxToRem";
 
 export default function Routes() {
   return (
@@ -24,6 +25,7 @@ export default function Routes() {
         <Route path="/projetos/CalculadoraJS" exact component={CalculadoraJS} />
         <Route path="/projetos/apple" exact component={CloneApple} />
         <Route path="/projetos/facebook" exact component={Facebook} />
+        <Route path="/projetos/px-to-rem" exact component={PxToRem} />
         <Route path="/curriculo" exact component={Curriculum} />
       </Switch>
     </BrowserRouter>
